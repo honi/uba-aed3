@@ -11,4 +11,5 @@ Ciencias de la Computación - FCEN - UBA\
 
 - Código
 
-  - [Sudoku con backtracking](Code/sudoku)
+  - [Sudoku](Code/sudoku)
+  - [Suma de subconjuntos](Code/subset_sum)
