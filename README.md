@@ -14,3 +14,4 @@ Ciencias de la Computación - FCEN - UBA\
   - [Sudoku](Code/sudoku)
   - [Suma de subconjuntos](Code/subset_sum)
   - [Cuadrados mágicos](Code/magic_squares)
+  - [Maximizar la suma de k elementos de una matriz simétrica](Code/matrix_sum)
