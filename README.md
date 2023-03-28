@@ -7,11 +7,8 @@ Ciencias de la Computación - FCEN - UBA\
 
 - Prácticas
 
-  - Práctica 1: [enunciado](Prácticas/Enunciados/Práctica1.pdf)
+  - Práctica 1: [enunciado](Prácticas/Enunciados/Práctica1.pdf), [código](Code/Práctica1/)
 
-- Código
+- Código extra
 
   - [Sudoku](Code/sudoku)
-  - [Suma de subconjuntos](Code/subset_sum)
-  - [Cuadrados mágicos](Code/magic_squares)
-  - [Maximizar la suma de k elementos de una matriz simétrica](Code/matrix_sum)

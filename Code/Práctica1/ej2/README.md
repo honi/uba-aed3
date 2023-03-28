@@ -1,6 +1,7 @@
-# Cuadrados mágicos
+# # Práctica 1 / Ejercicio 2
 
-Implementación de `magic_squares` (práctica 1 / ejercicio 2) en C++ con backtracking.
+Argumentos de entrada:
+- `n`
 
 Devuelve la cantidad de cuadrados mágicos de n x n.
 

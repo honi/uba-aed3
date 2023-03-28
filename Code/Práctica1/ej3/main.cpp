@@ -20,6 +20,7 @@ void matrix_sum(vector<vector<int>> &m, int k, vector<int> a, int s, vector<int>
             a.push_back(i);
             int d = 0;
             for (int j = 0; j < a.size(); j++) {
+                // Matrix is symmetric, instead of adding m[a[j]][i] we could multiply d * 2.
                 d += m[i][a[j]] + m[a[j]][i];
             }
             matrix_sum(m, k - 1, a, s + d, c);
