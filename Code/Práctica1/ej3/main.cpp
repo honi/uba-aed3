@@ -6,28 +6,23 @@ using namespace std;
 vector<int> res;
 int max_sum = -1;
 
-void matrix_sum(vector<vector<int>> &m, int k, vector<int> a, int s, vector<int> &c) {
+void matrix_sum(vector<vector<int>> &m, int k, int i, vector<int> &a, int s) {
+    int n = m.size();
     if (k == 0) {
         if (s > max_sum) {
             res = a;
             max_sum = s;
         }
-    } else {
-        int n = m.size();
-        for (int i = 0; i < n; i++) {
-            if (c[i] != 0) continue;
-            c[i] = 1;
-            a.push_back(i);
-            int d = 0;
-            for (int j = 0; j < a.size(); j++) {
-                // Matrix is symmetric, instead of adding m[a[j]][i] we could multiply d * 2.
-                d += m[i][a[j]] + m[a[j]][i];
-            }
-            matrix_sum(m, k - 1, a, s + d, c);
-            // Backtrack
-            c[i] = 0;
-            a.pop_back();
+    } else if (i < n) {
+        a.push_back(i);
+        int d = 0;
+        for (int j = 0; j < a.size(); j++) {
+            // Matrix is symmetric, instead of adding m[a[j]][i] we could multiply d * 2.
+            d += m[i][a[j]] + m[a[j]][i];
         }
+        matrix_sum(m, k - 1, i + 1, a, s + d);
+        a.pop_back();
+        matrix_sum(m, k, i + 1, a, s);
     }
 }
 
@@ -38,20 +33,19 @@ int main(int argc, char *argv[]) {
     // Initialize matrix.
     int n = 4;
     vector<vector<int>> m = vector<vector<int>>(n);
-    // m[0] = {0,  10, 10, 1};
-    // m[1] = {10, 0,  5,  2};
-    // m[2] = {10, 5,  0,  1};
-    // m[3] = {1,  2,  1,  0};
-    m[0] = {1, 5, 3, 9};
-    m[1] = {5, 0, 2, 1};
-    m[2] = {3, 2, 8, 4};
-    m[3] = {9, 1, 4, 6};
-
-    // Initialize candidates vector.
-    vector<int> c = vector<int>(n);
+    m[0] = {0,  10, 10, 1};
+    m[1] = {10, 0,  5,  2};
+    m[2] = {10, 5,  0,  1};
+    m[3] = {1,  2,  1,  0};
+    // m[0] = {1, 5, 3, 9};
+    // m[1] = {5, 0, 2, 1};
+    // m[2] = {3, 2, 8, 4};
+    // m[3] = {9, 1, 4, 6};
 
     // Calculate solution.
-    matrix_sum(m, k, {}, 0, c);
+    vector<int> a;
+    a.reserve(k);
+    matrix_sum(m, k, 0, a, 0);
 
     // Print solution.
     printf("matrix:\n");
