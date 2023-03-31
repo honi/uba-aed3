@@ -39,7 +39,7 @@ int main(int argc, char *argv[]) {
     m[2] = {21, 17, 0,  2};
     m[3] = {3,  22, 30, 0};
 
-    // Initialize solution and candidates vectors.
+    // Initialize candidates and solution vectors.
     vector<int> c = vector<int>(n);
     vector<int> a = vector<int>(n);
 
