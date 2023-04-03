@@ -22,19 +22,19 @@ pair<float, float> cc_backtracking(vector<int> &B, int i, int j) {
 }
 
 pair<float, float> cc_top_down(vector<int> &B, int i, int j) {
-    if (i < 0 && j > 0) {
+    if (i <= 0 && j > 0) {
         return {infinity, infinity};
     } else if (j <= 0) {
         return {0, 0};
     } else {
-        if (top_down_memo[i][j].first == -1) {
-            pair<float, float> r = cc_top_down(B, i - 1, j - B[i]);
-            top_down_memo[i][j] = min(
-                {B[i] + r.first, 1.0 + r.second},
+        if (top_down_memo[i - 1][j].first == -1) {
+            pair<float, float> r = cc_top_down(B, i - 1, j - B[i - 1]);
+            top_down_memo[i - 1][j] = min(
+                {B[i - 1] + r.first, 1.0 + r.second},
                 cc_top_down(B, i - 1, j)
             );
         }
-        return top_down_memo[i][j];
+        return top_down_memo[i - 1][j];
     }
 }
 
@@ -102,7 +102,7 @@ int main(int argc, char *argv[]) {
             n + 1,
             vector<pair<float, float>>(c + 1, {-1, -1})
         );
-        res = cc_top_down(B, n - 1, c);
+        res = cc_top_down(B, n, c);
 
         auto end = chrono::high_resolution_clock::now();
         auto elapsed = chrono::duration_cast<chrono::milliseconds>(end - start);
@@ -131,7 +131,7 @@ int main(int argc, char *argv[]) {
     for (int i = 0; i < ceil(N / 10); i++) {
         auto start = chrono::high_resolution_clock::now();
 
-        // Initialize memoization matrix and calculate result.
+        // Calculate result.
         res = cc_backtracking(B, n - 1, c);
 
         auto end = chrono::high_resolution_clock::now();
