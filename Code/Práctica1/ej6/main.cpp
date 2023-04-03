@@ -13,14 +13,11 @@ pair<float, float> cc_backtracking(vector<int> &B, int i, int j) {
     } else if (j <= 0) {
         return {0, 0};
     } else {
-        // Is there a simpler way to do this in C++?
         pair<float, float> r = cc_backtracking(B, i - 1, j - B[i]);
-        vector<pair<float, float>> options = {
+        return min(
             {B[i] + r.first, 1.0 + r.second},
-            cc_backtracking(B, i - 1, j),
-        };
-        sort(options.begin(), options.end());
-        return options[0];
+            cc_backtracking(B, i - 1, j)
+        );
     }
 }
 
@@ -31,14 +28,11 @@ pair<float, float> cc_top_down(vector<int> &B, int i, int j) {
         return {0, 0};
     } else {
         if (top_down_memo[i][j].first == -1) {
-            // Is there a simpler way to do this in C++?
             pair<float, float> r = cc_top_down(B, i - 1, j - B[i]);
-            vector<pair<float, float>> options = {
+            top_down_memo[i][j] = min(
                 {B[i] + r.first, 1.0 + r.second},
-                cc_top_down(B, i - 1, j),
-            };
-            sort(options.begin(), options.end());
-            top_down_memo[i][j] = options[0];
+                cc_top_down(B, i - 1, j)
+            );
         }
         return top_down_memo[i][j];
     }
@@ -55,14 +49,11 @@ pair<float, float> cc_bottom_up(vector<int> &B, int n, int c) {
     // Fill matrix bottom up.
     for (int i = 1; i <= n; i++) {
         for (int j = c; j >= 0; j--) {
-            // Is there a simpler way to do this in C++?
             pair<float, float> r = M[i - 1][max(0, j - B[i])];
-            vector<pair<float, float>> options = {
+            M[i][j] = min(
                 {B[i] + r.first, 1.0 + r.second},
-                M[i - 1][j],
-            };
-            sort(options.begin(), options.end());
-            M[i][j] = options[0];
+                M[i - 1][j]
+            );
         }
     }
 
