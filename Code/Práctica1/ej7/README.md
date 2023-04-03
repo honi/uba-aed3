@@ -7,4 +7,5 @@ Argumentos de entrada:
 ```bash
 make
 ./bin/app 4 3 2 5 6
+./bin/app 3 3 6 10
 ```
