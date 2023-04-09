@@ -1,6 +1,4 @@
 #include <limits>
-#include <math.h>
-#include <stdio.h>
 #include <vector>
 
 using namespace std;
@@ -14,6 +12,7 @@ vector<vector<int>> A = {
 };
 
 vector<vector<int>> memo(m, vector<int>(n, -1));
+
 int f(int i, int j) {
     // When we reach this position outside A we treat it as the base case from where
     // to build up the required life. We return 1 because that's the minimum life.

@@ -1,5 +1,4 @@
 #include <math.h>
-#include <stdio.h>
 #include <vector>
 
 using namespace std;
@@ -93,7 +92,7 @@ int main(int argc, char *argv[]) {
 
     // Top down with memoization.
     avg_elapsed = 0;
-    printf("\nRunning top down with memoization (x %d times)...\n", N);
+    printf("\nrunning top down with memoization (x %d times)...\n", N);
     for (int i = 0; i < N; i++) {
         auto start = chrono::high_resolution_clock::now();
 
@@ -112,7 +111,7 @@ int main(int argc, char *argv[]) {
 
     // Bottom up.
     avg_elapsed = 0;
-    printf("\nRunning bottom up (x %d times)...\n", N);
+    printf("\nrunning bottom up (x %d times)...\n", N);
     for (int i = 0; i < N; i++) {
         auto start = chrono::high_resolution_clock::now();
 
@@ -127,7 +126,7 @@ int main(int argc, char *argv[]) {
 
     // Backtracking without memoization.
     avg_elapsed = 0;
-    printf("\nRunning backtracking without memoization (x %.0f times, this takes a long time)...\n", ceil(N / 10));
+    printf("\nrunning backtracking without memoization (x %.0f times, this takes a long time)...\n", ceil(N / 10));
     for (int i = 0; i < ceil(N / 10); i++) {
         auto start = chrono::high_resolution_clock::now();
 
