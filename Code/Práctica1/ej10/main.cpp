@@ -2,23 +2,56 @@
 
 using namespace std;
 
-vector<int> w = {19, 7, 5, 6, 1};
-vector<int> s = {15, 13, 7, 8, 2};
-vector<vector<vector<int>>> memo;
+vector<vector<int>> memo;
 
-vector<int> f(int i, int k) {
-    if (i == -1) return {};
-    if (k > s[i]) return f(i - 1, k);
-    if (memo[i][k].size() == 0) {
-        vector<int> a = f(i - 1, k + w[i]);
-        a.push_back(i);
-        vector<int> b = f(i - 1, k);
-        memo[i][k] = a.size() >= b.size() ? a : b;
+int top_down(vector<int> &w, vector<int> &s, int i, int k) {
+    if (i == -1) return 0;
+    if (k > s[i]) return top_down(w, s, i - 1, k);
+    if (memo[i][k] == -1) {
+        memo[i][k] = max(
+            top_down(w, s, i - 1, k + w[i]) + 1,
+            top_down(w, s, i - 1, k)
+        );
     }
     return memo[i][k];
 }
 
+int bottom_up(vector<int> &w, vector<int> &s) {
+    int n = w.size();
+
+    int max_w = 0;
+    for (int i = 0; i < n; i++) {
+        max_w += w[i];
+    }
+
+    printf("bottom up matrix:\n");
+    vector<vector<int>> m(n + 1, vector<int>(max_w + 1, 0));
+    for (int i = 0; i <= n; i++) {
+        for (int j = 0; j <= max_w; j++) {
+            if (i == 0) {
+                m[i][j] = 0;
+            } else {
+                if (j > s[i - 1]) {
+                    m[i][j] = m[i - 1][j];
+                } else {
+                    m[i][j] = max(
+                        m[i - 1][j],
+                        m[i - 1][min(max_w, j + w[i - 1])] + 1
+                    );
+                }
+            }
+            printf("%d ", m[i][j]);
+        }
+        printf("\n");
+    }
+
+    return m[n][1];
+}
+
 int main(int argc, char *argv[]) {
+    vector<int> w = {19, 7, 5, 6, 1};
+    vector<int> s = {15, 13, 7, 8, 2};
+
     printf("weights: [");
     for (int i = 0; i < w.size(); i++) {
         printf("%d", w[i]);
@@ -33,29 +66,16 @@ int main(int argc, char *argv[]) {
     }
     printf("]\n");
 
-    int M = 0;
-    for (int i = 0; i < w.size(); i++) {
-        M += w[i];
-    }
-
-    memo = vector<vector<vector<int>>>(w.size(), vector<vector<int>>(M));
-    vector<int> res = f(w.size() - 1, 0);
-
     printf("total boxes: %lu\n", w.size());
-    printf("max boxes: %lu\n", res.size());
-    printf("solution: [");
-    for (int i = 0; i < res.size(); i++) {
-        printf("%d", res[i]);
-        if (i < res.size() - 1) printf(", ");
-    }
-    printf("]\n");
 
-    printf("box\tweight\tacc. weight\tresistance\n");
-    int k = 0;
-    for (int i = res.size() - 1; i >= 0; i--) {
-        printf("%d\t%d\t%d\t\t%d\n", res[i], w[res[i]], k, s[res[i]]);
-        k += w[res[i]];
+    int max_w = 0;
+    for (int i = 0; i < w.size(); i++) {
+        max_w += w[i];
     }
+    memo = vector<vector<int>>(w.size(), vector<int>(max_w, -1));
+
+    printf("max boxes (top down): %d\n", top_down(w, s, w.size() - 1, 0));
+    printf("max boxes (bottom up): %d\n", bottom_up(w, s));
 
     return 0;
 }
