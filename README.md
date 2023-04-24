@@ -7,7 +7,7 @@ Ciencias de la Computación - FCEN - UBA\
 
 - Prácticas
 
-  - Práctica 1: [enunciado](Prácticas/Enunciados/Práctica1.pdf), [código](Code/Práctica1/)
+  - Práctica 1: [enunciado + soluciones](Prácticas/Práctica1)
 
 - Código extra
 
