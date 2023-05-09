@@ -25,6 +25,7 @@ Ciencias de la Computación - FCEN - UBA\
     - [Ejercicio 15](Prácticas/Práctica1/ej15)
 
   - Práctica 2: [enunciado](Prácticas/Práctica2/Práctica2.pdf)
+    - [Ejercicio 6](Prácticas/Práctica2/ej06.pdf)
     - [Ejercicio 14](Prácticas/Práctica2/ej14.pdf)
 
   - Práctica 3: [enunciado](Prácticas/Práctica3/Práctica3.pdf)
