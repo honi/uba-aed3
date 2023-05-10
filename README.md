@@ -25,6 +25,7 @@ Ciencias de la Computación - FCEN - UBA\
     - [Ejercicio 15](Prácticas/Práctica1/ej15)
 
   - Práctica 2: [enunciado](Prácticas/Práctica2/Práctica2.pdf)
+    - [Ejercicio 5](Prácticas/Práctica2/ej05.pdf)
     - [Ejercicio 6](Prácticas/Práctica2/ej06.pdf)
     - [Ejercicio 14](Prácticas/Práctica2/ej14.pdf)
 
@@ -35,6 +36,16 @@ Ciencias de la Computación - FCEN - UBA\
     - [Ejercicio 8](Prácticas/Práctica3/ej08.pdf), [implementación](Prácticas/Práctica3/ej08.py)
     - [Ejercicio 10](Prácticas/Práctica3/ej10.pdf)
     - [Ejercicio 11](Prácticas/Práctica3/ej11.pdf)
+
+- Parciales
+
+  - 2022-09-30: [enunciado](Parciales/AED3-2022-09-30/AED3-2022-09-30.pdf)
+    - [Ejercicio 2](Parciales/AED3-2022-09-30/ej02.pdf) (falta demo)
+    - [Ejercicio 4](Parciales/AED3-2022-09-30/ej04.pdf)
+
+  - 2022-04-29: [enunciado](Parciales/AED3-2022-04-29/AED3-2022-04-29.pdf)
+    - [Ejercicio 1](Parciales/AED3-2022-04-29/ej01.pdf)
+    - [Ejercicio 2](Parciales/AED3-2022-04-29/ej02.pdf) (incompleto)
 
 - Código extra
 
