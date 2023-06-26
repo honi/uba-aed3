@@ -37,6 +37,30 @@ Ciencias de la Computación - FCEN - UBA\
     - [Ejercicio 10](Prácticas/Práctica3/ej10.pdf)
     - [Ejercicio 11](Prácticas/Práctica3/ej11.pdf)
 
+  - Práctica 4: [enunciado](Prácticas/Práctica4/Práctica4.pdf)
+    - [Ejercicio 1](Prácticas/Práctica4/ej01.pdf)
+      - Emprolijar.
+    - [Ejercicio 2](Prácticas/Práctica4/ej02.pdf)
+      - Emprolijar.
+    - [Ejercicio 3](Prácticas/Práctica4/ej03.pdf)
+    - [Ejercicio 4](Prácticas/Práctica4/ej04.pdf)
+    - [Ejercicio 5](Prácticas/Práctica4/ej05.pdf)
+    - [Ejercicio 6](Prácticas/Práctica4/ej06.pdf)
+    - [Ejercicio 7](Prácticas/Práctica4/ej07.pdf)
+    - [Ejercicio 9](Prácticas/Práctica4/ej09.pdf)
+      - Corregir que no es necesario reordenar los términos de las ecuaciones, da igual cómo se escriben, simplemente hay que tener cuidado de que al armar el grafo de restricciones, las aristas son siempre `(vi, vj)`.
+    - [Ejercicio 10](Prácticas/Práctica4/ej10.pdf)
+    - [Ejercicio 11](Prácticas/Práctica4/ej11.pdf)
+    - [Ejercicio 13](Prácticas/Práctica4/ej13.pdf)
+    - [Ejercicio 14](Prácticas/Práctica4/ej14.pdf)
+    - [Ejercicio 15](Prácticas/Práctica4/ej15.pdf)
+      - Revisar si está bien.
+    - [Ejercicio 16](Prácticas/Práctica4/ej16.pdf)
+      - Emprolijar.
+    - [Ejercicio 17](Prácticas/Práctica4/ej17.pdf)
+    - [Ejercicio 18](Prácticas/Práctica4/ej18.pdf)
+      - Agregar justificaciones.
+
 - Parciales
 
   - 2022-09-30: [enunciado](Parciales/AED3-2022-09-30/AED3-2022-09-30.pdf)
