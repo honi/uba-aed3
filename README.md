@@ -61,6 +61,15 @@ Ciencias de la Computación - FCEN - UBA\
     - [Ejercicio 18](Prácticas/Práctica4/ej18.pdf)
       - Agregar justificaciones.
 
+- Práctica 5: [enunciado](Prácticas/Práctica5/Práctica5.pdf)
+    - [Ejercicio 1](Prácticas/Práctica5/ej01.pdf)
+    - [Ejercicio 3](Prácticas/Práctica5/ej03.pdf)
+    - [Ejercicio 4](Prácticas/Práctica5/ej04.pdf)
+    - [Ejercicio 5](Prácticas/Práctica5/ej05.pdf)
+    - [Ejercicio 6](Prácticas/Práctica5/ej06.pdf)
+    - [Ejercicio 7](Prácticas/Práctica5/ej07.pdf)
+    - [Ejercicio 8](Prácticas/Práctica5/ej08.pdf)
+
 - Parciales
 
   - 2022-09-30: [enunciado](Parciales/AED3-2022-09-30/AED3-2022-09-30.pdf)
