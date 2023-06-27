@@ -85,6 +85,9 @@ Ciencias de la Computación - FCEN - UBA\
     - 2021-07-02: [enunciado](Parciales/AED3-2021-07-02/AED3-2021-07-02.pdf)
       - [Ejercicio 1](Parciales/AED3-2021-07-02/ej01.pdf)
 
+    - 2021-11-10: [enunciado](Parciales/AED3-2021-11-10/AED3-2021-11-10.pdf)
+      - [Ejercicio 2](Parciales/AED3-2021-11-10/ej02.pdf)
+
     - 2022-12-07: [enunciado](Parciales/AED3-2022-12-07/AED3-2022-12-07.pdf)
       - [Ejercicio 1](Parciales/AED3-2022-12-07/ej01.pdf)
       - [Ejercicio 2](Parciales/AED3-2022-12-07/ej02.pdf)
