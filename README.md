@@ -83,18 +83,18 @@ Ciencias de la Computación - FCEN - UBA\
 
   - 2do Parcial:
     - 2021-07-02: [enunciado](Parciales/AED3-2021-07-02/AED3-2021-07-02.pdf)
-      - [Ejercicio 1](Parciales/AED3-2021-07-02/ej01.pdf)
+      - [Ejercicio 1](Parciales/AED3-2021-07-02/ej01.pdf) (flujo máximo)
 
     - 2021-11-10: [enunciado](Parciales/AED3-2021-11-10/AED3-2021-11-10.pdf)
-      - [Ejercicio 2](Parciales/AED3-2021-11-10/ej02.pdf)
+      - [Ejercicio 2](Parciales/AED3-2021-11-10/ej02.pdf) (flujo máximo)
 
     - 2022-11-23: [enunciado](Parciales/AED3-2022-11-23/AED3-2022-11-23.pdf)
-      - [Ejercicio 2](Parciales/AED3-2022-11-23/ej02.pdf)
+      - [Ejercicio 2](Parciales/AED3-2022-11-23/ej02.pdf) (SRD + camino mínimo)
 
     - 2022-12-07: [enunciado](Parciales/AED3-2022-12-07/AED3-2022-12-07.pdf)
-      - [Ejercicio 1](Parciales/AED3-2022-12-07/ej01.pdf)
-      - [Ejercicio 2](Parciales/AED3-2022-12-07/ej02.pdf)
-      - [Ejercicio 3](Parciales/AED3-2022-12-07/ej03.pdf)
+      - [Ejercicio 1](Parciales/AED3-2022-12-07/ej01.pdf) (camino mínimo)
+      - [Ejercicio 2](Parciales/AED3-2022-12-07/ej02.pdf) (SRD + camino mínimo)
+      - [Ejercicio 3](Parciales/AED3-2022-12-07/ej03.pdf) (complejidad)
 
 - Código extra
 
