@@ -88,6 +88,9 @@ Ciencias de la Computación - FCEN - UBA\
     - 2021-11-10: [enunciado](Parciales/AED3-2021-11-10/AED3-2021-11-10.pdf)
       - [Ejercicio 2](Parciales/AED3-2021-11-10/ej02.pdf) (flujo máximo)
 
+    - 2022-06-24 (recuperatorio): [enunciado](Parciales/AED3-2022-06-24-recu/AED3-2022-06-24-recu.pdf)
+      - [Ejercicio 3](Parciales/AED3-2022-06-24-recu/ej03.pdf) (complejidad)
+
     - 2022-11-23: [enunciado](Parciales/AED3-2022-11-23/AED3-2022-11-23.pdf)
       - [Ejercicio 2](Parciales/AED3-2022-11-23/ej02.pdf) (SRD + camino mínimo)
 
