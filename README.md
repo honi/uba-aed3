@@ -94,7 +94,7 @@ Ciencias de la Computación - FCEN - UBA\
     - 2022-12-07: [enunciado](Parciales/AED3-2022-12-07/AED3-2022-12-07.pdf)
       - [Ejercicio 1](Parciales/AED3-2022-12-07/ej01.pdf) (camino mínimo)
       - [Ejercicio 2](Parciales/AED3-2022-12-07/ej02.pdf) (SRD + camino mínimo)
-      - [Ejercicio 3](Parciales/AED3-2022-12-07/ej03.pdf) (complejidad)
+      - [Ejercicio 4](Parciales/AED3-2022-12-07/ej04.pdf) (complejidad)
 
 - Código extra
 
