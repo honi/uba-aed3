@@ -72,13 +72,20 @@ Ciencias de la Computación - FCEN - UBA\
 
 - Parciales
 
-  - 2022-09-30: [enunciado](Parciales/AED3-2022-09-30/AED3-2022-09-30.pdf)
-    - [Ejercicio 2](Parciales/AED3-2022-09-30/ej02.pdf) (falta demo)
-    - [Ejercicio 4](Parciales/AED3-2022-09-30/ej04.pdf)
+  - 1er Parcial:
+    - 2022-09-30: [enunciado](Parciales/AED3-2022-09-30/AED3-2022-09-30.pdf)
+      - [Ejercicio 2](Parciales/AED3-2022-09-30/ej02.pdf) (falta demo)
+      - [Ejercicio 4](Parciales/AED3-2022-09-30/ej04.pdf)
 
-  - 2022-04-29: [enunciado](Parciales/AED3-2022-04-29/AED3-2022-04-29.pdf)
-    - [Ejercicio 1](Parciales/AED3-2022-04-29/ej01.pdf)
-    - [Ejercicio 2](Parciales/AED3-2022-04-29/ej02.pdf) (incompleto)
+    - 2022-04-29: [enunciado](Parciales/AED3-2022-04-29/AED3-2022-04-29.pdf)
+      - [Ejercicio 1](Parciales/AED3-2022-04-29/ej01.pdf)
+      - [Ejercicio 2](Parciales/AED3-2022-04-29/ej02.pdf) (incompleto)
+
+  - 2do Parcial:
+    - 2022-12-07: [enunciado](Parciales/AED3-2022-12-07/AED3-2022-12-07.pdf)
+      - [Ejercicio 1](Parciales/AED3-2022-12-07/ej01.pdf)
+      - [Ejercicio 2](Parciales/AED3-2022-12-07/ej02.pdf)
+      - [Ejercicio 3](Parciales/AED3-2022-12-07/ej03.pdf)
 
 - Código extra
 
