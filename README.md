@@ -100,22 +100,22 @@ Ciencias de la Computación - FCEN - UBA\
       - [Ejercicio 4](Parciales/P1/2022-09-30/ej04.pdf) (BFS, caminos)
 
   - 2do Parcial:
-    - 2021-07-02: [enunciado](Parciales/2021-07-02/2021-07-02.pdf)
-      - [Ejercicio 1](Parciales/2021-07-02/ej01.pdf) (flujo máximo)
+    - 2021-07-02: [enunciado](Parciales/P2/2021-07-02/2021-07-02.pdf)
+      - [Ejercicio 1](Parciales/P2/2021-07-02/ej01.pdf) (flujo máximo)
 
-    - 2021-11-10: [enunciado](Parciales/2021-11-10/2021-11-10.pdf)
-      - [Ejercicio 2](Parciales/2021-11-10/ej02.pdf) (flujo máximo)
+    - 2021-11-10: [enunciado](Parciales/P2/2021-11-10/2021-11-10.pdf)
+      - [Ejercicio 2](Parciales/P2/2021-11-10/ej02.pdf) (flujo máximo)
 
-    - 2022-06-24 (recuperatorio): [enunciado](Parciales/2022-06-24-recu/2022-06-24-recu.pdf)
-      - [Ejercicio 3](Parciales/2022-06-24-recu/ej03.pdf) (complejidad)
+    - 2022-06-24 (recuperatorio): [enunciado](Parciales/P2/2022-06-24-recu/2022-06-24-recu.pdf)
+      - [Ejercicio 3](Parciales/P2/2022-06-24-recu/ej03.pdf) (complejidad)
 
-    - 2022-11-23: [enunciado](Parciales/2022-11-23/2022-11-23.pdf)
-      - [Ejercicio 2](Parciales/2022-11-23/ej02.pdf) (SRD + camino mínimo)
+    - 2022-11-23: [enunciado](Parciales/P2/2022-11-23/2022-11-23.pdf)
+      - [Ejercicio 2](Parciales/P2/2022-11-23/ej02.pdf) (SRD + camino mínimo)
 
-    - 2022-12-07: [enunciado](Parciales/2022-12-07/2022-12-07.pdf)
-      - [Ejercicio 1](Parciales/2022-12-07/ej01.pdf) (camino mínimo)
-      - [Ejercicio 2](Parciales/2022-12-07/ej02.pdf) (SRD + camino mínimo)
-      - [Ejercicio 4](Parciales/2022-12-07/ej04.pdf) (complejidad)
+    - 2022-12-07: [enunciado](Parciales/P2/2022-12-07/2022-12-07.pdf)
+      - [Ejercicio 1](Parciales/P2/2022-12-07/ej01.pdf) (camino mínimo)
+      - [Ejercicio 2](Parciales/P2/2022-12-07/ej02.pdf) (SRD + camino mínimo)
+      - [Ejercicio 4](Parciales/P2/2022-12-07/ej04.pdf) (complejidad)
 
 - Código extra
 
