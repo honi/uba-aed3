@@ -32,10 +32,13 @@ Ciencias de la Computación - FCEN - UBA\
   - Práctica 3: [enunciado](Prácticas/Práctica3/Práctica3.pdf)
     - [Ejercicio 1](Prácticas/Práctica3/ej01.pdf)
     - [Ejercicio 2](Prácticas/Práctica3/ej02.pdf)
+      - Demo del c) está mal.
     - [Ejercicio 5](Prácticas/Práctica3/ej05.pdf)
     - [Ejercicio 8](Prácticas/Práctica3/ej08.pdf), [implementación](Prácticas/Práctica3/ej08.py)
     - [Ejercicio 10](Prácticas/Práctica3/ej10.pdf)
+      - Es `O(n^2)` con matriz.
     - [Ejercicio 11](Prácticas/Práctica3/ej11.pdf)
+      - Revisar.
 
   - Práctica 4: [enunciado](Prácticas/Práctica4/Práctica4.pdf)
     - [Ejercicio 1](Prácticas/Práctica4/ej01.pdf)
@@ -98,6 +101,9 @@ Ciencias de la Computación - FCEN - UBA\
       - [Ejercicio 2](Parciales/P1/2022-09-30/ej02.pdf) (greedy, falta demo)
       - [Ejercicio 3](Parciales/P1/2022-09-30/ej03.pdf) (AGM, falta algoritmo)
       - [Ejercicio 4](Parciales/P1/2022-09-30/ej04.pdf) (BFS, caminos)
+
+    - 2023-05-12: [enunciado](Parciales/P1/2023-05-12/2023-05-12.pdf)
+      - [Ejercicio 3](Parciales/P1/2023-05-12/ej03.pdf) (AGM)
 
   - 2do Parcial:
     - 2021-07-02: [enunciado](Parciales/P2/2021-07-02/2021-07-02.pdf)
