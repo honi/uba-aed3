@@ -73,31 +73,49 @@ Ciencias de la Computación - FCEN - UBA\
 - Parciales
 
   - 1er Parcial:
-    - 2022-09-30: [enunciado](Parciales/AED3-2022-09-30/AED3-2022-09-30.pdf)
-      - [Ejercicio 2](Parciales/AED3-2022-09-30/ej02.pdf) (falta demo)
-      - [Ejercicio 4](Parciales/AED3-2022-09-30/ej04.pdf)
+    - 2014-12-12: [enunciado](Parciales/P1/2014-12-12/2014-12-12.pdf)
+      - [Ejercicio 5](Parciales/P1/2014-12-12/ej05.pdf) (AGM)
 
-    - 2022-04-29: [enunciado](Parciales/AED3-2022-04-29/AED3-2022-04-29.pdf)
-      - [Ejercicio 1](Parciales/AED3-2022-04-29/ej01.pdf)
-      - [Ejercicio 2](Parciales/AED3-2022-04-29/ej02.pdf) (incompleto)
+    - 2016-05-07: [enunciado](Parciales/P1/2016-05-07/2016-05-07.pdf)
+      - [Ejercicio 5](Parciales/P1/2016-05-07/ej05.pdf) (AGM)
+
+    - 2019-05-08: [enunciado](Parciales/P1/2019-05-08/2019-05-08.pdf)
+      - [Ejercicio 5](Parciales/P1/2019-05-08/ej05.pdf) (AGM, incompleto)
+
+    - 2019-10-02: [enunciado](Parciales/P1/2019-10-02/2019-10-02.pdf)
+      - [Ejercicio 4](Parciales/P1/2019-10-02/ej04.pdf) (AGM, 2 opciones)
+
+    - 2022-04-29: [enunciado](Parciales/P1/2022-04-29/2022-04-29.pdf)
+      - [Ejercicio 1](Parciales/P1/2022-04-29/ej01.pdf) (PD)
+      - [Ejercicio 2](Parciales/P1/2022-04-29/ej02.pdf) (incompleto)
+      - [Ejercicio 4](Parciales/P1/2022-04-29/ej04.pdf) (AGM)
+
+    - 2022-07-01: [enunciado](Parciales/P1/2022-07-01/2022-07-01.pdf)
+      - [Ejercicio 3](Parciales/P1/2022-07-01/ej03.pdf) (BFS, caminos)
+      - [Ejercicio 4](Parciales/P1/2022-07-01/ej04.pdf) (AGM, emprolijar)
+
+    - 2022-09-30: [enunciado](Parciales/P1/2022-09-30/2022-09-30.pdf)
+      - [Ejercicio 2](Parciales/P1/2022-09-30/ej02.pdf) (greedy, falta demo)
+      - [Ejercicio 3](Parciales/P1/2022-09-30/ej03.pdf) (AGM, falta algoritmo)
+      - [Ejercicio 4](Parciales/P1/2022-09-30/ej04.pdf) (BFS, caminos)
 
   - 2do Parcial:
-    - 2021-07-02: [enunciado](Parciales/AED3-2021-07-02/AED3-2021-07-02.pdf)
-      - [Ejercicio 1](Parciales/AED3-2021-07-02/ej01.pdf) (flujo máximo)
+    - 2021-07-02: [enunciado](Parciales/2021-07-02/2021-07-02.pdf)
+      - [Ejercicio 1](Parciales/2021-07-02/ej01.pdf) (flujo máximo)
 
-    - 2021-11-10: [enunciado](Parciales/AED3-2021-11-10/AED3-2021-11-10.pdf)
-      - [Ejercicio 2](Parciales/AED3-2021-11-10/ej02.pdf) (flujo máximo)
+    - 2021-11-10: [enunciado](Parciales/2021-11-10/2021-11-10.pdf)
+      - [Ejercicio 2](Parciales/2021-11-10/ej02.pdf) (flujo máximo)
 
-    - 2022-06-24 (recuperatorio): [enunciado](Parciales/AED3-2022-06-24-recu/AED3-2022-06-24-recu.pdf)
-      - [Ejercicio 3](Parciales/AED3-2022-06-24-recu/ej03.pdf) (complejidad)
+    - 2022-06-24 (recuperatorio): [enunciado](Parciales/2022-06-24-recu/2022-06-24-recu.pdf)
+      - [Ejercicio 3](Parciales/2022-06-24-recu/ej03.pdf) (complejidad)
 
-    - 2022-11-23: [enunciado](Parciales/AED3-2022-11-23/AED3-2022-11-23.pdf)
-      - [Ejercicio 2](Parciales/AED3-2022-11-23/ej02.pdf) (SRD + camino mínimo)
+    - 2022-11-23: [enunciado](Parciales/2022-11-23/2022-11-23.pdf)
+      - [Ejercicio 2](Parciales/2022-11-23/ej02.pdf) (SRD + camino mínimo)
 
-    - 2022-12-07: [enunciado](Parciales/AED3-2022-12-07/AED3-2022-12-07.pdf)
-      - [Ejercicio 1](Parciales/AED3-2022-12-07/ej01.pdf) (camino mínimo)
-      - [Ejercicio 2](Parciales/AED3-2022-12-07/ej02.pdf) (SRD + camino mínimo)
-      - [Ejercicio 4](Parciales/AED3-2022-12-07/ej04.pdf) (complejidad)
+    - 2022-12-07: [enunciado](Parciales/2022-12-07/2022-12-07.pdf)
+      - [Ejercicio 1](Parciales/2022-12-07/ej01.pdf) (camino mínimo)
+      - [Ejercicio 2](Parciales/2022-12-07/ej02.pdf) (SRD + camino mínimo)
+      - [Ejercicio 4](Parciales/2022-12-07/ej04.pdf) (complejidad)
 
 - Código extra
 
