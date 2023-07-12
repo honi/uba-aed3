@@ -112,6 +112,9 @@ Ciencias de la Computación - FCEN - UBA\
     - 2021-11-10: [enunciado](Parciales/P2/2021-11-10/2021-11-10.pdf)
       - [Ejercicio 2](Parciales/P2/2021-11-10/ej02.pdf) (flujo máximo)
 
+    - 2022-06-24: [enunciado](Parciales/P2/2022-06-24/2022-06-24.pdf)
+      - [Ejercicio 1](Parciales/P2/2022-06-24/ej01.pdf) (camino mínimo)
+
     - 2022-06-24 (recuperatorio): [enunciado](Parciales/P2/2022-06-24-recu/2022-06-24-recu.pdf)
       - [Ejercicio 3](Parciales/P2/2022-06-24-recu/ej03.pdf) (complejidad)
 
