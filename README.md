@@ -42,7 +42,6 @@ Ciencias de la Computación - FCEN - UBA\
 
   - Práctica 4: [enunciado](Prácticas/Práctica4/Práctica4.pdf)
     - [Ejercicio 1](Prácticas/Práctica4/ej01.pdf)
-      - Emprolijar.
     - [Ejercicio 2](Prácticas/Práctica4/ej02.pdf)
       - Emprolijar.
     - [Ejercicio 3](Prácticas/Práctica4/ej03.pdf)
