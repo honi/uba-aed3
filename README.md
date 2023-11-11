@@ -5,6 +5,8 @@ Ciencias de la Computación - FCEN - UBA\
 
 ## Índice
 
+- [Resumen para final](./Final/README.md)
+
 - Prácticas
 
   - Práctica 1: [enunciado](Prácticas/Práctica1/Práctica1.pdf)
