@@ -81,3 +81,5 @@ También se podrían implementar otras podas, por ejemplo si la suma parcial + l
 Si bien no es una poda, también se podrían ordenar los elementos de `S` con algún criterio para priorizar la generación temprana de ciertas soluciones parciales. Por ejemplo, si ordenamos de mayor a menor, vamos a comenzar agregando a las soluciones parciales los elementos más grandes, y así podar más rápido los subconjuntos que suman más que `T`.
 
 La complejidad de este algoritmo en el peor caso sigue siendo `O(2^n)`. Esto sucede cuando no pudimos aplicar ninguna poda. Pero en la práctica se obtienen tiempos mucho mejores asumiendo que la instancia del problema permite aplicar varias veces la poda implementada.
+
+Algunos otros problemas que se pueden resolver de forma eficiente con backtracking: sudoku, el problema de las 8 reinas, el problema de la mochila (knapsack) en su versión discreta.
