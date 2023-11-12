@@ -1,5 +1,22 @@
 # Final AED3
 
-- [Fuerza bruta y backtracking](./backtracking.md)
-- [Programación dinámica](./dinamica.md)
-- [Algoritmos golosos](./golosos.md)
+- Técnicas algorítmicas
+    - [Fuerza bruta y backtracking](./backtracking.md)
+    - [Programación dinámica](./dinamica.md)
+    - [Algoritmos golosos](./golosos.md)
+- Algoritmos elementales de grafos
+    - [BFS](./bfs.md)
+    - [DFS](./dfs.md)
+    - [Orden topológico](./orden-topologico.md)
+    - [Algoritmo de Kosaraju](./kosaraju.md)
+- AGM y camino mínimo
+    - [Algoritmo de Prim](./prim.md)
+    - [Algoritmo de Kruskal](./kruskal.md)
+    - [Algoritmo de Bellman-Ford](./bellman-ford.md)
+    - [Algoritmo de Dijkstra](./dijkstra.md)
+    - [Algoritmo de Floyd-Warshall](./floyd-warshall.md)
+- Flujo
+    - [Flujo máximo](./flujo-maximo.md)
+    - [Flujo de costo mínimo](./flujo-cost-minimo.md)
+- NP completitud
+    - ???
