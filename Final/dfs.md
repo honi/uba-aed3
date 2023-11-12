@@ -31,7 +31,7 @@ def dfs(G):
             if not v.visited:
                 v.parent = u
                 dfs_visit(v)
-        u.end = time
+        u.finish = time
         time += 1
 
     for u in G.V:
@@ -51,7 +51,7 @@ Cuando visitamos un vértice, le agregamos algunos atributos que nos brindan inf
 
 - `visited`: indica si visitamos ese vértice o no. Al terminar de correr DFS todos los vértices fueron visitados. Este atributo lo usamos internamente en el algoritmo, pero no nos dice nada al finalizar.
 - `parent`: indica quién es el padre en el bosque DFS. Con esta información podemos construir un bosque de componentes conexas.
-- `start` y `end`: indican el tiempo cuando se visitó el vértice y cuando se terminó el recorrido en profunidad desde ese vértice. Esta información es muy útil para luego obtener información acerca del grafo, por ejemplo si un vértice es descendiente de otro en el bosque DFS.
+- `start` y `finish`: indican el tiempo cuando se visitó el vértice y cuando se terminó el recorrido en profunidad desde ese vértice. Esta información es muy útil para luego obtener información acerca del grafo, por ejemplo si un vértice es descendiente de otro en el bosque DFS.
 
 **Clasificación de aristas**
 

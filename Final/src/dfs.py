@@ -13,7 +13,7 @@ def dfs(G):
             if not v.visited:
                 v.parent = u
                 dfs_visit(v)
-        u.end = time
+        u.finish = time
         time += 1
 
     for u in G.V:
@@ -29,7 +29,7 @@ def run(G):
     print(f"DFS on {G}")
     dfs(G)
     for v in G.V:
-        print(f"{v}: parent={v.parent} start={v.start} end={v.end}")
+        print(f"{v}: parent={v.parent} start={v.start} finish={v.finish}")
 
 
 if __name__ == "__main__":
