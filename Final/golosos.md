@@ -16,18 +16,18 @@ Ambas técnicas aplican a problemas de optimización, y requieren que el problem
 
 **Problema: tiempo de espera**
 
-Un servidor tiene que atender `n` clientes, en cualquier orden. Cada cliente `i` requiere de un tiempo `t(i)` para ser atendido. Se busca determinar en qué orden atender a los clientes para minimizar la suma del tiempo de espera de todos los clientes.
+Un servidor tiene que atender $n$ clientes, en cualquier orden. Cada cliente $i$ requiere de un tiempo $t(i)$ para ser atendido. Se busca determinar en qué orden atender a los clientes para minimizar la suma del tiempo de espera de todos los clientes.
 
 Este problema se puede resolver de manera eficiente con el siguiente algoritmo goloso: simplemente atender a los clientes por orden creciente de su tiempo de atención. Es decir, primero atendemos a los clientes que requieren poco tiempo, y luego a los que requiren más.
 
-Si `S = (i1, ..., in)` es el orden de atención de los clientes, el tiempo total de espera está dado por:
+Si $S = (i_1, \dots, i_n)$ es el orden de atención de los clientes, el tiempo total de espera está dado por:
 
-`T = t(i1) + (t(i1) + t(i2)) + (t(i1) + t(i2) + t(i3)) + ...`
+$$T = t(i_1) + (t(i_1) + t(i_2)) + (t(i_1) + t(i_2) + t(i_3)) + \dots$$
 
 Cada cliente debe esperar la suma de los tiempos de atención de todos los clientes atendidos previamente.
 
 Podemos simplificar la expresión de la siguiente forma:
 
-`T = sum_{k=1}^n (n-k) * t(ik)`
+$$T = \sum_{k=1}^n (n-k) * t(i_k)$$
 
-El tiempo de atención del cliente `i1` impacta en el tiempo de espera del resto de los `n-1` clientes. La del cliente `i2` en el resto de los `n-2` clientes, y así sucesivamente. Al ordenar los clientes por su tiempo de atención minimizamos cada término de la sumatoria, y así minimizamos el tiempo total de espera.
+El tiempo de atención del cliente $i_1$ impacta en el tiempo de espera del resto de los $n-1$ clientes. La del cliente $i_2$ en el resto de los $n-2$ clientes, y así sucesivamente. Al ordenar los clientes por su tiempo de atención minimizamos cada término de la sumatoria, y así minimizamos el tiempo total de espera.
