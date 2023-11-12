@@ -5,6 +5,7 @@
     - [Programación dinámica](./dinamica.md)
     - [Algoritmos golosos](./golosos.md)
 - Algoritmos elementales de grafos
+    - [Representación](./representacion.md)
     - [BFS](./bfs.md)
     - [DFS](./dfs.md)
     - [Orden topológico](./orden-topologico.md)
