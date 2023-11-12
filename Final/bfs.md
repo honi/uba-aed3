@@ -1,13 +1,13 @@
-# BFS
+# BFS: Breadth-first search
 
 **Objetivo**
 
-Descubrir todos los vértices alcanzables desde algún vértice fuente $s$. Durante este proceso podemos resolver los siguientes problemas:
+Visitar todos los vértices alcanzables desde algún vértice fuente $s$ realizando un recorrido en anchura. Durante este proceso podemos resolver los siguientes problemas:
 
 - Encontrar caminos mínimos (en cantidad de aristas) desde $s$ a todos los otros vértices.
 - Medir la distancia (en cantidad de aristas) desde $s$ a todos los otros vértices.
 - Encontrar todos los vértices alcanzables desde $s$.
-- Encontrar componentes componexas.
+- Encontrar componentes conexas.
 
 **Idea**
 
@@ -53,4 +53,6 @@ Por otro lado, cada vez que descubrimos un vértice revisamos su lista de adyace
 
 Asumimos que podemos encolar y desencolar en $O(1)$ (por ejemplo con una lista enlazada). El resto de las operaciones realizadas son $O(1)$. La inicialización de los atributos es: $O(V)$.
 
-La complejidad final resulta $O(V+E)$. El espacio requerido es $O(V)$ pues en el peor caso encolamos todos los vértices al mismo tiempo (por ejemplo si fuese un grafo completo).
+La complejidad final resulta $O(V+E)$.
+
+El espacio requerido es $O(V)$ pues en el peor caso encolamos todos los vértices al mismo tiempo (por ejemplo si fuese un grafo completo).
