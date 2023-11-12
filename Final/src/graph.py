@@ -17,3 +17,6 @@ class Graph:
     def get(self, id: int):
         for v in self.V:
             if v.id == id: return v
+
+    def __repr__(self):
+        return f"G=({self.V}, {self.Adj})"

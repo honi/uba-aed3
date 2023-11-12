@@ -23,6 +23,7 @@ def bfs(G, s):
 
 
 def run(G, s):
+    print(f"BFS from {s} on {G}")
     bfs(G, s)
     for v in G.V:
         print(f"d({s}, {v}) = {v.distance}")
@@ -43,3 +44,12 @@ if __name__ == "__main__":
         },
     )
     run(G, G.get(2))
+
+    G = Graph(
+        V=[1, 2, 3, 4],
+        Adj={
+            1: [2],
+            2: [3],
+        },
+    )
+    run(G, G.get(1))
