@@ -36,13 +36,13 @@ Notemos que este algoritmo es goloso. En cada paso, tomamos una decisión golosa
 
 Dicho más formalmente, tenemos un corte $(S, V-S)$ donde $S$ contiene los vértices ya agregados al árbol y $V-S$ son los vértices en la cola de prioridad que no están aún en el árbol. En cada paso, elegimos la arista $e=(u,v)$ de menor peso que cruza el corte, es decir $u \in S$, $v \in V-S$.
 
-Veamos que la elección golosa es correcta. Sea $T$ algún AGM del grafo, y supongamos que la arista $e$ que recién elegimos es la primer arista que no está en $T$. Como $T$ es un AGM, necesariamente tiene que haber un camino que conecte $u$ con $v$. En particular, tiene que haber en $T$ una arista $f=(x,y)$ que cruza el corte al igual que $e$, es decir $x \in S$, $y \in V-S$.
+Veamos que la elección golosa es correcta. Sea $T$ algún AGM del grafo, y supongamos que la arista $e$ que recién elegimos es la primer arista que no está en $T$. Como $T$ es un AGM, necesariamente tiene que haber un camino que conecte $u$ con $v$. En particular, tiene que haber en $T$ una arista $f=(x,y)$ que es parte del camino entre $u$ y $v$, y además cruza el corte al igual que $e$, es decir $x \in S$, $y \in V-S$.
 
 En la iteración que agregamos la arista $e$ podríamos haber agregado $f$, pero no lo hicimos. Elegimos la arista de menor peso que cruza el corte, entonces vale que $w(e) \leq w(f)$.
 
 Definimos $T' = T - f + e$. Las aristas $f$ y $e$ pertenecen a un mismo ciclo, entonces al hacer este cambio $T'$ sigue siendo un AG. Para ver que es AGM, miremos cómo cambia el peso del árbol: $w(T') = w(T) - w(f) + w(e) \leq w(T)$. Tomamos $T$ como AGM, lo cual implica que $w(T) \leq w(T')$. Por lo tanto concluimos que $w(T') = w(T)$ y $T'$ es un AGM.
 
-Este mismo proceso lo repetimos por cada arista que elegimos que no está en el AGM $T$ que tomamos originalmente.
+Este mismo proceso lo repetimos por cada arista que elegimos que no está en el AGM $T$ que tomamos originalmente, y así verificamos que el árbol que nuestro algoritmo encuentra es un AGM.
 
 **Complejidad**
 
