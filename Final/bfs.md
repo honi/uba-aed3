@@ -26,15 +26,15 @@ def bfs(G, s):
     s.distance = 0
     s.parent = None
 
-    q = [s]
-    while q:
-        u = q.pop(0)
+    Q = [s]
+    while Q:
+        u = Q.pop(0)
         for v in G.Adj[u]:
             if not v.visited:
                 v.visited = True
                 v.distance = u.distance + 1
                 v.parent = u
-                q.append(v)
+                Q.append(v)
 ```
 
 Utilizamos una cola FIFO para procesar los vértices. Cada vez que procesamos un vértice, revisamos todos sus vecinos y agregamos a la cola los que aún no fueron visitados.

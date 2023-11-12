@@ -10,9 +10,11 @@
     - [DFS](./dfs.md)
     - [Orden topológico](./orden-topologico.md)
     - [Algoritmo de Kosaraju](./kosaraju.md)
-- AGM y camino mínimo
+- AGM
+    - [AGM](./agm.md)
     - [Algoritmo de Prim](./prim.md)
     - [Algoritmo de Kruskal](./kruskal.md)
+- Camino mínimo
     - [Algoritmo de Bellman-Ford](./bellman-ford.md)
     - [Algoritmo de Dijkstra](./dijkstra.md)
     - [Algoritmo de Floyd-Warshall](./floyd-warshall.md)
