@@ -2,3 +2,4 @@
 
 - [Fuerza bruta y backtracking](./backtracking.md)
 - [Programación dinámica](./dinamica.md)
+- [Algoritmos golosos](./golosos.md)
