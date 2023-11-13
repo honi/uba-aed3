@@ -1,6 +1,6 @@
 # Camino mínimo
 
-A diferencia de BFS que encuentra caminos mínimos en cantidad de aristas, este problema aplica a grafos pesados y consiste en encontrar un camino de peso mínimo entre dos vértices. Esto es útil si por ejemplo tenemos un mapa con las distancias entre cada ciudad, y queremos encontrar la ruta más rápida para llegar de una ciudad A a otra ciudad B.
+A diferencia de BFS que encuentra caminos mínimos en cantidad de aristas, este problema aplica a grafos dirigidos pesados y consiste en encontrar un camino de peso mínimo entre dos vértices. Esto es útil si por ejemplo tenemos un mapa con las distancias entre cada ciudad, y queremos encontrar la ruta más rápida para llegar de una ciudad A a otra ciudad B.
 
 El peso de un camino $p = \langle v_0, \dots, v_k \rangle$ está definido por la suma de los pesos de las aristas que contiene.
 
@@ -27,7 +27,7 @@ Supongamos que existe otro camino $q_{ij} = \langle v_i, \dots, v_j \rangle$ tal
 
 **Uno a todos**: busca el camino mínimo desde un vértice fuente hacia todos los otros vértices del grafo.
 
-Entrada: grafo $G=(V,E)$, función de peso $w:E \rightarrow \mathbb{R}$, vértice fuente $s \in V$.
+Entrada: grafo dirigido pesado $G=(V,E)$, función de peso $w:E \rightarrow \mathbb{R}$, vértice fuente $s \in V$.
 
 Salida: la distancia mínima $\delta(s, v)$ desde $s$ a cada vértice $v \in V$ y el árbol de caminos mínimos (por si necesitamos obtener un camino concreto y no solo el peso mínimo).
 
@@ -40,7 +40,7 @@ Algoritmos:
 
 **Todos a todos**: busca el camino mínimo entre todo par de vértices del grafo.
 
-Entrada: grafo $G=(V,E)$, función de peso $w:E \rightarrow \mathbb{R}$.
+Entrada: grafo dirigido pesado $G=(V,E)$, función de peso $w:E \rightarrow \mathbb{R}$.
 
 Salida: la distancia mínima $\delta(u, v)$ para todo par de vértices $u,v \in V$ y la estructura de caminos mínimos (por si necesitamos obtener los caminos concretos y no solo los pesos mínimos).
 
@@ -57,3 +57,31 @@ Algoritmos:
 - Minimizar el esfuerzo que realizamos en un sendero de montaña. Los vértices son las intersecciones de los distintos senderos de la montaña, las aristas representan los senderos y pueden tener peso positivo si requieren mucho esfuerzo (es una subida), o peso negativo si son fáciles (es una bajada). Queremos encontrar la ruta entre 2 puntos de la montaña que minimiza el esfuerzo total que realizamos.
 
 - Precomputar los caminos mínimos en un mapa para un servicio online como Google Maps. Los vértices son los puntos en el mapa y las aristas las rutas. En este escenario utilizaríamos Floyd-Warshall ya que no nos interesa ningún camino en particular, sino que queremos encontrar todos los caminos mínimos para guardarlos en una cache y así optimizar el tiempo de consulta de los usuarios.
+
+## Propiedades de caminos mínimos
+
+Estas propiedades las usamos en las demostraciones de los algoritmos de camino mínimo. Sea $G=(V,E)$ un grafo dirigido pesado, función de peso $w:E \rightarrow \mathbb{R}$, y $s \in V$ el vértice fuente. La propiedad $v.d$ de los vértices es la distancia estimada desde $s$ a $v$.
+
+**Desigualdad triangular** (triangle inequality)
+
+Para cualquier arista $(u,v) \in E$ vale $\delta(s,v) \leq \delta(s,u) + w(u,v)$.
+
+**Límite superior** (upper-bound property)
+
+Siempre tenemos $v.d \geq \delta(s, v)$ para todos los vértices $v \in V$. Cuando $v.d$ vale exactamente $\delta(s, v)$ ya no cambia más.
+
+**Vértices no alcanzables** (no-path property)
+
+Si no existe camino de $s$ a $v$, entonces siempre tenemos $v.d = \delta(s, v) = \infty$.
+
+**Convergencia** (convergence property)
+
+Si $s \leadsto u \rightarrow v$ es un camino mínimo de $s$ a $v$ y tenemos $u.d = \delta(s,u)$ antes de relajar la arista $(u,v)$, entonces luego de relajarla vale $v.d = \delta(s,v)$ y ya no cambia.
+
+**Relajación** (path-relaxation property)
+
+Si tenemos un camino mínimo $p = v_0, \dots, v_k$ desde $s = v_0$ a $v_k$, y relajamos las aristas en orden $(v_0, v_1), (v_1, v_2), \dots, (v_{k-1}, v_k)$, entonces $v_k.d = \delta(s, v_k)$. Esta propiedad también vale si en el medio se relajan otras aristas.
+
+**Subgrafo de predecesores** (predecessor-subgraph property)
+
+Una vez que $v.d = \delta(s,v)$ para todos los vértices $v \in V$, el subgrafo de predecesores es un árbol de caminos mínimos enraizado en $s$.
