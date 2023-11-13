@@ -15,7 +15,7 @@ Por otro lado, estamos utilizando los valores 1 y 0 para representar si existe o
 Más formalmente podemos definir la matriz de adyacencia de la siguiente manera (para grafos no pesados):
 
 $$
-A \in \{0, 1\}^{|V| \times |V|}
+A \in \lbrace 0, 1 \rbrace ^ {|V| \times |V|}
 \hspace{40pt}
 a_{ij} = \begin{cases}
     1 & \text{si} \; \exists (i,j) \in E \\

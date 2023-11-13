@@ -9,7 +9,7 @@ $$w(p) = \sum_{i=1}^k w(v_{i-1}, v_i)$$
 Definimos el peso del camino mínimo $\delta(u,v)$ desde $u$ a $v$ así:
 
 $$\delta(u,v) = \begin{cases}
-min\{ w(p) : p = u \leadsto v \} & \text{si existe camino de }u\text{ a }v \\
+min \lbrace w(p) : p = u \leadsto v \rbrace & \text{si existe camino de }u\text{ a }v \\
 \infty & \text{caso contrario}
 \end{cases}$$
 

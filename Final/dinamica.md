@@ -36,7 +36,7 @@ Tenemos una vara de longitud $n$ y queremos hacerle cortes para formar varas má
 
 Este problema presenta una subestructura óptima: después de elegir dónde hacer el primer corte, resultan 2 varas las cuales una vamos a dejar fija sin más cortes, y la otra vamos a nuevamente optimizar sus cortes para maximizar la ganancia (utilizando el mismo algoritmo).
 
-Definimos $r(n) = max\{ p(i) + r(n-i) : 1 \leq i \leq n \}$ como la ganancia máxima para una vara de longitud $n$. Probamos realizar todos los posibles cortes para obtener una vara de longitud $i$ que se vende a un precio $p(i)$, y luego buscamos la ganancia máxima de la otra vara de longitud $n-i$.
+Definimos $r(n) = max \lbrace p(i) + r(n-i) : 1 \leq i \leq n \rbrace$ como la ganancia máxima para una vara de longitud $n$. Probamos realizar todos los posibles cortes para obtener una vara de longitud $i$ que se vende a un precio $p(i)$, y luego buscamos la ganancia máxima de la otra vara de longitud $n-i$.
 
 ```python
 def rod_cutting(n, p):
