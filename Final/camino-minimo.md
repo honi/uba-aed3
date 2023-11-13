@@ -15,7 +15,13 @@ min \lbrace w(p) : p = u \leadsto v \rbrace & \text{si existe camino de }u\text{
 
 Un ciclo $C$ es negativo si $w(C) < 0$. Si el grafo contiene un ciclo negativo alcanzable desde $u$ entonces $\delta(u,v)$ no está bien definido, ya que podríamos recorrer el ciclo $C$ una cantidad arbitraria de veces para reducir el peso del camino. En estos casos definimos $\delta(u,v) = -\infty$.
 
-Los caminos mínimos presentan subestructura óptima: cualquier subcamino de un camino mínimo, es también mínimo. Por eso las técnicas greedy o de programación dinámica suelen funcionar muy bien. Idea: supongamos que un camino mínimo tiene un subcamino que no es mínimo. Entonces podríamos reemplazar ese subcamino por otro que sí es mínimo, y así obtener un camino de peso menor. Absurdo porque dijimos que el camino ya era mínimo, necesariamente todos los subcaminos son también mínimos.
+## Subestructura óptima
+
+Los caminos mínimos presentan subestructura óptima: cualquier subcamino de un camino mínimo, es también mínimo. Por eso las técnicas greedy o de programación dinámica suelen funcionar muy bien.
+
+Sea $p = \langle v_0, \dots, v_k \rangle$ un camino mínimo y para cualquier par de $i,j$ tales que $0 \leq i \leq j \leq k$, sea $p_{ij} = \langle v_i, \dots, v_j \rangle$ un subcamino de $p$. Entonces $p_{ij}$ es un camino mínimo de $v_i$ a $v_j$.
+
+Supongamos que existe otro camino $q_{ij} = \langle v_i, \dots, v_j \rangle$ tal que $w(q_{ij}) < w(p_{ij})$. Podemos construir un nuevo camino $p' = p_{0i} + q_{ij} + p_{jk}$ que va de $v_0$ a $v_k$, y tiene peso $w(p') = w(p_{0i}) + w(q_{ij}) + w(p_{jk}) < w(p)$. Absurdo pues $p$ es un camino de peso mínimo.
 
 ## Topologías de problemas de camino mínimo
 
