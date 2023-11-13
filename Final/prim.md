@@ -32,7 +32,7 @@ def prim(G, r):
 
 **Correctitud**
 
-Notemos que este algoritmo es goloso. En cada paso, tomamos una decisión golosa respecto a qué vértice agregar al árbol: tomamos el vértice que se conecta con el árbol usando la arista de menor peso.
+Notemos que este algoritmo es goloso. En cada paso, tomamos una decisión golosa respecto de qué vértice agregar al árbol: tomamos el vértice que se conecta con el árbol usando la arista de menor peso.
 
 Dicho más formalmente, tenemos un corte $(S, V-S)$ donde $S$ contiene los vértices ya agregados al árbol y $V-S$ son los vértices en la cola de prioridad que no están aún en el árbol. En cada paso, elegimos la arista $e=(u,v)$ de menor peso que cruza el corte, es decir $u \in S$, $v \in V-S$.
 
