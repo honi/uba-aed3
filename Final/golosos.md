@@ -4,17 +4,17 @@ Los algoritmos golosos sirven para problemas de optimización, y se destacan por
 
 La estrategia consistente en construir una solución óptima de forma incremental. En cada paso se toma una decisión localmente óptima de cómo extender la solución, y esta decisión nunca se vuelve a revisar (no hay backtracking).
 
-**Heurísticas**
+## Heurísticas
 
 Hay problemas para los cuales un algoritmo goloso no encuentra la solución óptima. No obstante, igual se puede utilizar esta técnica como heurística para acercarse a una solución aceptable.
 
 Esto es particularmente útil en problemas NP-Hard, como ser el problema del viajante de comercio. No se conoce un algoritmo polinomial para este problema. Pero podemos utilizar una estrategia golosa y en cada paso elegir visitar el vecino más cercano que aún no fue visitado. Aunque esta heurística no siempre produce la solución óptima, se acerca bastante y las soluciones obtenidas suelen ser razonables. Y más importante aún, se obtiene también en un tiempo razonable.
 
-**Comparación con programación dinámica**
+## Comparación con programación dinámica
 
 Ambas técnicas aplican a problemas de optimización, y requieren que el problema posea subestructura óptima. Programación dinámica encuentra la solución exacta, mientras que un algoritmo goloso no siempre puede encontrar la solución exacta. No obstante, si se tiene un algoritmo goloso que encuentra la solución exacta, es más conveniente que programación dinámica porque generalmente son algoritmos más rápidos.
 
-**Problema: tiempo de espera**
+## Problema: tiempo de espera
 
 Un servidor tiene que atender $n$ clientes, en cualquier orden. Cada cliente $i$ requiere de un tiempo $t(i)$ para ser atendido. Se busca determinar en qué orden atender a los clientes para minimizar la suma del tiempo de espera de todos los clientes.
 

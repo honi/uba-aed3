@@ -30,7 +30,7 @@ def prim(G, r):
                 v.key = G.w(u, v)
 ```
 
-**Correctitud**
+## Correctitud
 
 Notemos que este algoritmo es goloso. En cada paso, tomamos una decisión golosa respecto de qué vértice agregar al árbol: tomamos el vértice que se conecta con el árbol usando la arista de menor peso.
 
@@ -44,7 +44,7 @@ Definimos $T' = T - f + e$. Las aristas $f$ y $e$ pertenecen a un mismo ciclo, e
 
 Este mismo proceso lo repetimos por cada arista que elegimos que no está en el AGM $T$ que tomamos originalmente, y así verificamos que el árbol que nuestro algoritmo encuentra es un AGM.
 
-**Complejidad**
+## Complejidad
 
 La complejidad de Prim depende de la implementación de la cola de prioridad.
 

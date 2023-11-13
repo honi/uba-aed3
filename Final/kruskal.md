@@ -4,7 +4,7 @@ Este algoritmo genera un bosque de AGMs. Pero si el grafo es conexo entonces nos
 
 Inicialmente colocamos cada vértice en un árbol distinto. En cada paso, elegimos la arista de menor peso que conecta 2 árboles distintos. La agregamos al bosque combinando esos 2 árboles en uno solo. Repetimos este paso hasta que no haya más aristas para procesar.
 
-**Disjoint-set / union-find**
+## Disjoint-set / union-find
 
 Para que el algoritmo sea eficiente necesitamos una forma eficiente de determinar si una arista conecta 2 árboles distintos, y consecuentemente combinarlos en un único árbol. Para esto se utiliza una estructura llamada "disjoint-set" (también conocida como "union-find") que nos provee las siguientes operaciones:
 
@@ -17,7 +17,7 @@ Además existen algunas optimizaciones que funcionan muy bien en la práctica:
 - Union by rank: al combinar 2 conjuntos se elige como representante al que tiene mayor rank, así solo tenemos que actualizar el conjunto más chico.
 - Path compression: al buscar un representante se quitan los "representantes intermedios", así la próxima vez que se consulte por el representate de cualquier elemento dentro del mismo conjunto ya tenemos la respuesta inmediatamente.
 
-**Algoritmo**
+## Algoritmo
 
 ```python
 def kruskal(G):
@@ -32,7 +32,7 @@ def kruskal(G):
     return A
 ```
 
-**Correctitud**
+## Correctitud
 
 Primero probamos que el algoritmo obtiene un AG. Sea $G$ un grafo conexo y pesado, y $T$ el subgrafo generado por el algoritmo. $T$ no puede tener ciclos, ya que por definición una arista es descartada si forma un ciclo. $T$ no puede estar desconectado porque el algoritmo hubiese agregado la primer arista que encuentra que conecta las 2 componentes. Entonces $T$ es un AG de $G$.
 
@@ -48,7 +48,7 @@ Sea $f$ alguna arista en $C$ que además no está en $A$. Como el algoritmo elig
 
 Cuando $A$ es un AG, por la hipótesis inductiva $A$ es también un AGM.
 
-**Complejidad**
+## Complejidad
 
 Inicializar los $|V|$ árboles cuesta $O(V)$. Ordenar las aristas es $O(sort(E))$, que lo dejamos sin especificar ya que quizás el problema admite algún ordenamiento que no sea por comparaciones lo cual brinda una mejor complejidad. El bucle realiza $O(E)$ iteraciones donde cada iteración tiene una complejidad de $O(\alpha(V))$ en el llamado a `union`.
 

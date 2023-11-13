@@ -1,6 +1,6 @@
 # BFS: Breadth-first search
 
-**Objetivo**
+## Objetivo
 
 Visitar todos los vértices alcanzables desde algún vértice fuente $s$ realizando un recorrido en anchura. Durante este proceso podemos resolver los siguientes problemas:
 
@@ -9,11 +9,11 @@ Visitar todos los vértices alcanzables desde algún vértice fuente $s$ realiza
 - Encontrar todos los vértices alcanzables desde $s$.
 - Encontrar componentes conexas.
 
-**Idea**
+## Idea
 
 Empezando por $s$, descubrimos todos su vecinos (están a distancia 1 de $s$). Luego, descubrimos todos los vecinos de sus vecinos (están a distancia 2 de $s$). Así sucesivamente hasta que no haya más vecinos para descubrir. En otras palabras, descubrimos todos los vértices a distancia $k$ de $s$ antes de descubrir los que están a distancia $k+1$. BFS recorre el grafo en "anchura", o por niveles. Es como una onda expansiva desde $s$.
 
-**Algoritmo**
+## Algoritmo
 
 ```python
 def bfs(G, s):
@@ -45,7 +45,7 @@ Cuando descubrimos un vértice no visitamos, le agregamos algunos atributos que 
 - `parent`: indica quién es el padre en el árbol BFS. Con esta información podemos construir un árbol enraizado en $s$. El camino en este árbol desde $s$ a cualquier otro vértice es un camino mínimo en cantidad de aristas.
 - `distance`: indica la distancia mínima en cantidad de aristas desde $s$.
 
-**Complejidad**
+## Complejidad
 
 Inicialmente ningún vértice está marcado como visitado, y el algoritmo una vez que marca uno como visitado, nunca lo desmarca. Como ésta es la condición para encolar vértices (que no estén visitados), en la cola entran a lo sumo todos los vértices una única vez: $O(V)$.
 

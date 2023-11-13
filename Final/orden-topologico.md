@@ -19,7 +19,7 @@ B -´
 
 Si el grafo es dirigido pero tiene ciclos, entonces no existe ningún orden topológico posible.
 
-**Algoritmo**
+## Algoritmo
 
 Existen varias formas de obtener un orden topológico. Si tenemos una implementación de DFS que retorna los tiempos de finalización para cada vértice, entonces se puede obtener un orden topológico muy fácilmente con el siguiente algoritmo.
 
@@ -31,7 +31,7 @@ def topological_sort(G):
 
 Esta implementación tiene como precondición que G sea un DAG. Si no, se puede utilizar el mismo DFS para detectar los back edges (que indican que hay un ciclo) y retornar algún error.
 
-**Correctitud**
+## Correctitud
 
 Lema: un grafo dirigido $G$ es acíclico $\iff$ DFS(G) no encuentra back edges.
 
@@ -49,6 +49,6 @@ Consideremos una arista cualquiera $(u,v)$. Cuando exploramos esta arista, $v$ n
 
 Entonces solo pueden pasar 2 cosas: $v$ aún no fue visitado y va a ser un descendiente de $u$, por lo tanto $v.f < u.f$. O sino $v$ y sus descendientes ya fueron visitados, y por lo tanto $v.f$ ya está definido. Como $u$ está siendo explorado en este momento, aún no tiene definido $u.f$, pero cualquier valor que tome será más grande que $v.f$.
 
-**Complejidad**
+## Complejidad
 
 Lineal: $O(V + E)$.
