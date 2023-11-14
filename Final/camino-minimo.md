@@ -80,7 +80,7 @@ Si $s \leadsto u \rightarrow v$ es un camino mínimo de $s$ a $v$ y tenemos $u.d
 
 **Relajación** (path-relaxation property)
 
-Si tenemos un camino mínimo $p = v_0, \dots, v_k$ desde $s = v_0$ a $v_k$, y relajamos las aristas en orden $(v_0, v_1), (v_1, v_2), \dots, (v_{k-1}, v_k)$, entonces $v_k.d = \delta(s, v_k)$. Esta propiedad también vale si en el medio se relajan otras aristas.
+Si tenemos un camino mínimo $p = v_0, \dots, v_k$ desde $s = v_0$ a $v_k$, y relajamos todas las aristas en orden $(v_0, v_1), (v_1, v_2), \dots, (v_{k-1}, v_k)$, entonces $v_k.d = \delta(s, v_k)$. Esta propiedad también vale si en el medio se relajan otras aristas.
 
 **Subgrafo de predecesores** (predecessor-subgraph property)
 
