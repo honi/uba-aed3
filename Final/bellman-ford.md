@@ -6,6 +6,8 @@ La entrada del algoritmo es un grafo dirigido pesado $G=(V,E)$ y un vértice fue
 
 El algoritmo relaja todas las aristas, progresivamente decrementando $v.d$, el peso estimado del camino mínimo desde $s$ a todos los vértices $v \in V$. Se repite este proceso hasta que $v.d$ converge a $\delta(s, v)$. Al finalizar, retorna `True` si y solo si no hay ciclos negativos alcanzables desde $s$, caso contrario retorna `False`.
 
+## Algoritmo
+
 ```python
 def init_single_source(G, s):
     for v in G.V:
@@ -22,7 +24,7 @@ def bellman_ford(G, s):
     init_single_source(G, s)
 
     # Relajamos |V|-1 veces todas las aristas.
-    for i in range(0, len(G.V) - 1):
+    for i in range(len(G.V) - 1):
         for (u, v) in G.E:
             relax(u, v, G.w)
 
