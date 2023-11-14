@@ -13,6 +13,11 @@ class Graph:
             v: [self.get(u) for u in Adj.get(v.id, [])]
             for v in self.V
         }
+        self.E = [
+            (u, v)
+            for u, nu in self.Adj.items()
+            for v in nu
+        ]
 
     def get(self, id: int):
         for v in self.V:
