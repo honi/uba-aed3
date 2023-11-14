@@ -60,7 +60,7 @@ Algoritmos:
 
 ## Propiedades de caminos mínimos
 
-Estas propiedades las usamos en las demostraciones de los algoritmos de camino mínimo. Sea $G=(V,E)$ un grafo dirigido pesado con función de peso $w:E \rightarrow \mathbb{R}$, y $s \in V$ el vértice fuente. La propiedad $v.d$ de los vértices es la distancia estimada desde $s$ a $v$.
+Estas propiedades las usamos en las demostraciones de los algoritmos de camino mínimo. Sea $G=(V,E)$ un grafo dirigido pesado con función de peso $w:E \rightarrow \mathbb{R}$, y $s \in V$ el vértice fuente. La propiedad $v.d$ de los vértices es la distancia estimada desde $s$ a $v$ la cual converge a $\delta(s,v)$ mediante una sucesión de pasos de relajación.
 
 **Desigualdad triangular** (triangle inequality)
 
