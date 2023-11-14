@@ -42,7 +42,7 @@ def dijkstra(G, s):
 
 ## Correctitud
 
-Sea $G=(V,E)$ un grafo dirigido pesado con función de peso no negativo $w:E \rightarrow \mathbb{R}$, y $s \in V$ el vértice fuente. La propiedad $v.d$ de los vértices es la distancia estimada desde $s$ a $v$.
+Sea $G=(V,E)$ un grafo dirigido pesado con función de peso no negativo $w:E \rightarrow \mathbb{R}_{\geq0}$, y $s \in V$ el vértice fuente. La propiedad $v.d$ de los vértices es la distancia estimada desde $s$ a $v$.
 
 Con inducción en la cantidad de iteraciones, vamos a mostrar que al comienzo de cada iteración, vale $v.d = \delta(s,v)$ para todos los vértices $v \in S$, y el algoritmo termina cuando $S=V$.
 
@@ -76,7 +76,7 @@ $\delta(s,y) \leq \delta(s,u) \leq u.d \leq y.d = \delta(s,y) \Rightarrow u.d = 
 - El `for` para iterar por los vecinos de $v$ de forma agregada entre todas las iteraciones del `while` es $O(E)$, porque cada vértice sale de la cola de prioridad una única vez.
 
 La complejidad final resulta:
+
 - Cola de prioridad con vector: $O(V + V + V^2 + E) = O(V^2 + E) = O(V^2)$.
-- Cola de prioridad con min heap: $O(V + V + V*log(V) + E*log(V)) = O(V*log(V) + E*log(V))$.
-    - Grafos ralos donde $E \approx V$: $O(V*log(V))$
-    - Si no: $O(E*log(V))$
+- Cola de prioridad con min heap: $O(V + V + V * log(V) + E * log(V)) = O(V * log(V) + E * log(V)) = O(E * log(V))$.
+    - Para grafos ralos donde $E \approx V$: $O(V * log(V))$
