@@ -58,6 +58,8 @@ Algoritmos:
 
 - Precomputar los caminos mínimos en un mapa para un servicio online como Google Maps. Los vértices son los puntos en el mapa y las aristas las rutas. En este escenario utilizaríamos Floyd-Warshall ya que no nos interesa ningún camino en particular, sino que queremos encontrar todos los caminos mínimos para guardarlos en una cache y así optimizar el tiempo de consulta de los usuarios.
 
+- Determinar el diámetro de un grafo, es decir el camino mínimo más largo. Para esto podemos calcular todos los caminos mínimos con Floyd-Warshall y luego buscar el máximo entre ellos. Esta aplicación sirve por ejemplo si el grafo modela una red de comunicaciones, donde el peso de las aristas representa el tiempo necesario para que un mensaje viaje por ese cable. El diámetro de la red nos dice el tiempo máximo de latencia para cualquier mensaje.
+
 ## Propiedades de caminos mínimos
 
 Estas propiedades las usamos en las demostraciones de los algoritmos de camino mínimo. Sea $G=(V,E)$ un grafo dirigido pesado con función de peso $w:E \rightarrow \mathbb{R}$, y $s \in V$ el vértice fuente. La propiedad $v.d$ de los vértices es la distancia estimada desde $s$ a $v$ la cual converge a $\delta(s,v)$ mediante una sucesión de pasos de relajación.
