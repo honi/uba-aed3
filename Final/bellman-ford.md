@@ -2,7 +2,7 @@
 
 El algoritmo de Bellman-Ford encuentra todos los caminos mínimos desde algún vértice fuente hacia todo el resto de los vértices alcanzables.
 
-La entrada del algoritmo es un grafo dirigido pesado $G=(V,E)$ y un vértice fuente $s \in V$. Este algoritmo acepta aristas con pesos negativos y permite detectar ciclos negativos.
+La entrada del algoritmo es un grafo dirigido pesado $G=(V,E)$ y un vértice fuente $s \in V$. Este algoritmo acepta aristas con pesos negativos y permite detectar ciclos negativos alcanzables desde $s$.
 
 El algoritmo relaja todas las aristas, progresivamente decrementando $v.d$, el peso estimado del camino mínimo desde $s$ a todos los vértices $v \in V$. Se repite este proceso hasta que $v.d$ converge a $\delta(s, v)$. Al finalizar, retorna `True` si y solo si no hay ciclos negativos alcanzables desde $s$, caso contrario retorna `False`.
 
@@ -59,7 +59,7 @@ Si $G$ no tiene ciclos negativos alcanzables desde $s$, por el **lema** anterior
 
 Veamos el caso cuando $G$ contiene un ciclo negativo alcanzable desde $s$. Sea $C = \langle v_0, \dots, v_k \rangle$ con $v_0 = v_k$ tal que $w(C) = \sum\limits_{i=1}^k w(v_{i-1}, v_i) < 0$.
 
-Supongamos para llegar a un absurdo que el algoritmo retorna `True`. Eso significa que ninguna arista cumple la desigualdad del `if` adentro del segundo `for`. En particular, nos interesan las aristas de $C$: $v_i.d <= v_{i-1}.d + w(v_{i-1}, v_i)$ para todo $0 \leq i \leq k$.
+Supongamos para llegar a un absurdo que el algoritmo retorna `True`. Eso significa que ninguna arista cumple la desigualdad del `if` adentro del segundo `for`. En particular, nos interesan las aristas de $C$: $v_i.d \leq v_{i-1}.d + w(v_{i-1}, v_i)$ para todo $0 \leq i \leq k$.
 
 Aplicamos una sumatoria de ambos lados: $\sum\limits_{i=1}^k v_i.d \leq \sum\limits_{i=1}^k v_{i-1} + \sum\limits_{i=1}^k w(v_{i-1}, v_i)$
 
