@@ -27,20 +27,20 @@ Supongamos que existe otro camino $q_{ij} = \langle v_i, \dots, v_j \rangle$ tal
 
 **Uno a todos**: busca el camino mínimo desde un vértice fuente hacia todos los otros vértices del grafo.
 
-Entrada: grafo dirigido pesado $G=(V,E)$, función de peso $w:E \rightarrow \mathbb{R}$, vértice fuente $s \in V$.
+Entrada: grafo dirigido pesado $G=(V,E)$ con función de peso $w:E \rightarrow \mathbb{R}$ y un vértice fuente $s \in V$.
 
 Salida: la distancia mínima $\delta(s, v)$ desde $s$ a cada vértice $v \in V$ y el árbol de caminos mínimos (por si necesitamos obtener un camino concreto y no solo el peso mínimo).
 
 Algoritmos:
 - Bellman-Ford: detecta ciclos negativos.
-- Dijkstra: requiere aristas con pesos positivos, greedy.
+- Dijkstra: requiere aristas con pesos no negativos, greedy.
 - Topological Sort: requiere que el grafo sea un DAG.
 
 **Uno a uno**: busca el camino mínimo desde un vértice fuente hacia otro vértice. Este es un caso particular de uno a todos, agregando a la entrada el vértice destino $u \in V$. Se suele resolver primero el problema uno a todos desde $s$ y luego extraer de la solución el camino mínimo $v \leadsto u$ que nos interesa.
 
 **Todos a todos**: busca el camino mínimo entre todo par de vértices del grafo.
 
-Entrada: grafo dirigido pesado $G=(V,E)$, función de peso $w:E \rightarrow \mathbb{R}$.
+Entrada: grafo dirigido pesado $G=(V,E)$ con función de peso $w:E \rightarrow \mathbb{R}$.
 
 Salida: la distancia mínima $\delta(u, v)$ para todo par de vértices $u,v \in V$ y la estructura de caminos mínimos (por si necesitamos obtener los caminos concretos y no solo los pesos mínimos).
 
