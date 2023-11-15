@@ -24,5 +24,6 @@ Resumen de los temas para el final, compilando resultados de las teóricas, otro
 - Flujo
     - [Flujo máximo](./flujo-maximo.md)
     - [Ford-Fulkerson](./ford-fulkerson.md)
+    - [Edmonds-Karp](./edmonds-karp.md)
 - NP completitud
     - ???

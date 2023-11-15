@@ -1,6 +1,6 @@
 # Flujo máximo
 
-Los datos de entrada a este problema son un grafo dirigido $G=(V,E)$, un vértice fuente $s \in V$, otro vértice sumidero $t \in V$ y una función de capacidad para las aristas $c: E \rightarrow \mathbb{N}$. Además, pedimos que si $(u,v) \in E$ entonces $(v,u) \notin E$ (esto se puede arreglar fácil agregando un vértice intermedio).
+Los datos de entrada a este problema son un grafo dirigido $G=(V,E)$, un vértice fuente $s \in V$, otro vértice sumidero $t \in V$ y una función de capacidad para las aristas $c: E \rightarrow \mathbb{Z}^+$. Además, pedimos que si $(u,v) \in E$ entonces $(v,u) \notin E$ (esto se puede arreglar fácil agregando un vértice intermedio).
 
 El problema de flujo máximo consistente en encontrar la máxima cantidad de flujo que puede circular desde $s$ hacia $t$, respetando las restricciones de capacidad de cada arista. El vértice $s$ produce unidades de flujo y $t$ las consume. Según el problema real que estemos resolviendo una unidad de flujo puede representar corriente eléctrica, litros de agua, información viajando por una red de comunicación, etc.
 
