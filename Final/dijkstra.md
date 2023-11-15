@@ -69,14 +69,23 @@ $\delta(s,y) \leq \delta(s,u) \leq u.d \leq y.d = \delta(s,y) \Rightarrow u.d = 
 
 - Inicializar los vértices: $O(V)$.
 - Insertar todos los vértices en $Q$: $O(V)$.
-- El `while` hace $O(V)$ iteraciones ya que nunca se vuelven a insertar vértices en $Q$.
-- Las operaciones con la cola de prioridad dependen de su implementación.
-    - Vector: $O(V)$ para extraer el mínimo, $O(1)$ para decrementar una clave.
-    - Min heap: $O(log(V))$ para extraer el mínimo y decrementar una clave.
-- El `for` para iterar por los vecinos de $v$ de forma agregada entre todas las iteraciones del `while` es $O(E)$, porque cada vértice sale de la cola de prioridad una única vez.
+- `while`: $(V * \text{extract\_min})$.
+    - Hace $O(V)$ iteraciones ya que nunca se vuelven a insertar vértices en $Q$.
+    - El costo de cada iteración es el costo de extraer el mínimo, depende de la cola utilizada.
+- `for`: $O(E * \text{decrease\_key})$
+    - Cada vértice sale de la cola de prioridad una única vez, por lo tanto en total recorremos cada arista una única vez.
+    - El costo de cada iteración es el costo de decrementar la clave, ya que `relax` es $O(1)$.
 
-La complejidad final resulta:
+Las operaciones con la cola de prioridad dependen de su implementación.
 
-- Cola de prioridad con vector: $O(V + V + V^2 + E) = O(V^2 + E) = O(V^2)$.
-- Cola de prioridad con min heap: $O(V + V + V * log(V) + E * log(V)) = O(V * log(V) + E * log(V)) = O(E * log(V))$.
+- Vector: $O(V)$ para extraer el mínimo, $O(1)$ para decrementar una clave.
+- Min binary heap: $O(log(V))$ para extraer el mínimo y decrementar una clave.
+- Fibonacci heap: $O(log(V))$ para extraer el mínimo, $O(1)$ amortizado para decrementar una clave.
+
+La complejidad final resulta: $O(V + V + V * \text{extract\_min} + E * \text{decrease\_key}) = O(V * \text{extract\_min} + E * \text{decrease\_key})$.
+
+- Cola de prioridad con vector: $O(V^2 + E) = O(V^2)$ pues $O(E) = O(V^2)$.
+- Cola de prioridad con min heap: $O(V * log(V) + E * log(V)) = O(E * log(V))$.
     - Para grafos ralos donde $E \approx V$: $O(V * log(V))$
+- Cola de prioridad con Fibonacci heap: $O(V * log(V) + E)$.
+    - Para grafos densos donde $E \approx V^2$ no conviene esta implementación.
