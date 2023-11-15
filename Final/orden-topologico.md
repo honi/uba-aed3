@@ -21,7 +21,7 @@ Si el grafo es dirigido pero tiene ciclos, entonces no existe ningún orden topo
 
 ## Algoritmo
 
-Existen varias formas de obtener un orden topológico. Podemos extender una implementación de DFS para que agregue adelante de la lista enlazada `L` cada vértice que termina de visitar (es decir, cuando vuelve del llamado recursivo de todos sus vecinos).
+Existen varias formas de obtener un orden topológico. Podemos extender [una implementación de DFS](./dfs.md) para que agregue adelante de la lista enlazada `L` cada vértice que termina de visitar (es decir, cuando vuelve del llamado recursivo de todos sus vecinos).
 
 Esta implementación tiene como precondición que G sea un DAG. Si no, se puede utilizar el mismo DFS para detectar los back edges (que indican que hay un ciclo) y retornar algún error.
 
