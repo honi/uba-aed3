@@ -11,11 +11,11 @@ Definiciones:
 
 ## Máquina de Turing
 
-maquina de turing
-MTD: deterministica: unica opcion
-MTND: no deterministica: muchas opciones para cada estado
+Una máquina de Turing es una cinta infinita la cual se mueva hacia la izquierda o derecha pasando por un cabezal. Además, en todo momento la máquina tiene un estado interno. En cada paso, el cabezal lee el símbolo en esa posición de la cinta y determina cuál es el nuevo estado, hacia dónde mover y qué otro símbolo escribir en la cinta.
 
-complejidad de MTND es la rama mas larga de ejecucion
+En la versión determinística (MTD), para cada combinación de estado y símbolo hay una única opción para hacer.
+
+En cambio, la versión no determinística (MTND) puede tener muchas opciones para realizar para la misma combinación de estado y símbolo leído. No está especificado de antemano ningún criterio para elegir qué hacer.
 
 ## Clases de problemas
 
