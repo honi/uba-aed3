@@ -6,13 +6,13 @@ El problema de flujo máximo consistente en encontrar la máxima cantidad de flu
 
 Se deben cumplir las siguientes propiedades para que el flujo circulando por la red sea factible. Usamos $f(u,v)$ para indicar la cantidad de flujo pasando por la arista $(u,v) \in E$. Dado un flujo factible $f$, el valor $F$ del flujo es la cantidad neta de unidades de flujo que salen de la fuente $s$.
 
-**Preservación de flujo**: la cantidad de flujo que entra en un vértice es igual a la cantidad que sale (excepto para los vértices especiales $s$ y $t$). No se acumula flujo en ningún vértice.
-
-Para todo $u \in V - \lbrace s,t \rbrace$ vale que $\sum\limits_{v \in V} f(v, u) = \sum\limits_{v \in V} f(u, v)$.
-
 **Restricción de capacidad**: el flujo circulando por una arista no puede superar su capacidad ni ser negativo.
 
 Para toda arista $(u,v) \in E$ vale que $0 \leq f(u,v) \leq c(u,v)$.
+
+**Conservación de flujo**: la cantidad de flujo que entra en un vértice es igual a la cantidad que sale (excepto para los vértices especiales $s$ y $t$). No se acumula flujo en ningún vértice.
+
+Para todo $u \in V - \lbrace s,t \rbrace$ vale que $\sum\limits_{v \in V} f(v, u) = \sum\limits_{v \in V} f(u, v)$.
 
 ## Red residual
 
@@ -49,6 +49,34 @@ f(u,v) - c_f(p) & \text{si } (v,u) \in p \text{\color{gray} (revertimos flujo an
 \end{cases}$$
 
 El nuevo valor de flujo $F'$ resulta $F' = F + c_f(p)$.
+
+Es importante que $f'$ siga siendo un flujo factible: tiene que respetar las capacidades y la conservación.
+
+**Restricción de capacidad**: $0 \leq f'(u,v) \leq c(u,v)$
+
+Caso $(u,v) \notin p$:
+
+Se mantiene el mismo flujo que antes $f'(u,v) = f(u,v)$, que ya era factible.
+
+Caso $(u,v) \in p$:
+
+Como $c_f(p)$ es el mínimo del camino $p$, podemos acotarlo por $c_f(u,v)$.
+
+$f'(u,v) = f(u,v) + c_f(p) \leq f(u,v) + c_f(u,v) \leq f(u,v) + c(u,v) - f(u,v) = c(u,v)$
+
+Por otro lado para ver que $f'(u,v) = f(u,v) + c_f(p) \geq 0$ notemos que $c_f(p) \geq 0$ por definición.
+
+Caso $(v,u) \in p$:
+
+$f'(u,v) = f(u,v) - c_f(p) \geq f(u,v) - c_f(v,u) = f(u,v) - f(u,v) = 0$
+
+Por otro lado para ver que $f'(u,v) \leq c(u,v)$ notemos que $f(u,v)$ ya era un flujo factible y le estamos restando $c_f(p) \geq 0$, por lo tanto vamos a seguir respetando la capacidad.
+
+**Conservación de flujo** (idea)
+
+Para probar que se conserva el flujo para un vértice que es parte del camino de aumento tenemos que analizar todos los casos para las orientaciones de las aristas que conectan este vértice con el resto del camino.
+
+En líneas generales, tiene que pasar que la misma cantidad de flujo nuevo que llega por una arista sale por la otra (puede ser una cantidad positiva o negativa), o bien que llega una cantidad positiva por una arista y llega la misma cantidad negativa por la otra arista.
 
 ## Cortes
 
