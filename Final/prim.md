@@ -25,7 +25,7 @@ def prim(G, r):
         for v in G.Adj[u]:
             # El vecino v no está en el AGM y utilizando la arista (u, v)
             # reducimos el costo para llegar hasta v.
-            if (v in Q) and (G.w(u, v) < v.key):
+            if v in Q and G.w(u, v) < v.key:
                 v.parent = u
                 v.key = G.w(u, v)
 ```

@@ -19,7 +19,7 @@ Empezando por $s$, descubrimos todos su vecinos (están a distancia 1 de $s$). L
 def bfs(G, s):
     for v in G.V:
         v.visited = False
-        v.distance = -1 # -infty
+        v.distance = -infty
         v.parent = None
 
     s.visited = True

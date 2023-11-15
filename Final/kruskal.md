@@ -24,8 +24,7 @@ def kruskal(G):
     A = []
     for v in G.V:
         make_set(v)
-    edges = sorted(G.E) # Ordena por peso de menor a mayor.
-    for (u, v) in edges:
+    for (u, v) in sorted(edges): # Ordenado por peso de menor a mayor.
         if find_set(u) != find_set(v):
             A += [(u, v)]
             union(u, v)

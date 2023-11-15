@@ -24,7 +24,7 @@ def bellman_ford(G, s):
     init_single_source(G, s)
 
     # Relajamos |V|-1 veces todas las aristas.
-    for i in range(len(G.V) - 1):
+    for i = 1 to len(G.V) - 1:
         for (u, v) in G.E:
             relax(u, v, G.w)
 

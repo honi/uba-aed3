@@ -26,7 +26,7 @@ Existen varias formas de obtener un orden topológico. Si tenemos una implementa
 ```python
 def topological_sort(G):
     dfs(G)
-    return sorted(G.V, key=lambda v: -v.finish)
+    return sorted(G.V, key=-v.finish)
 ```
 
 Esta implementación tiene como precondición que G sea un DAG. Si no, se puede utilizar el mismo DFS para detectar los back edges (que indican que hay un ciclo) y retornar algún error.
