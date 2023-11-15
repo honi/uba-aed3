@@ -11,7 +11,6 @@ Resumen de los temas para el final, compilando resultados de las teóricas, otro
     - [BFS](./bfs.md)
     - [DFS](./dfs.md)
     - [Orden topológico](./orden-topologico.md)
-    - [Algoritmo de Kosaraju](./kosaraju.md)
 - AGM
     - [AGM](./agm.md)
     - [Algoritmo de Prim](./prim.md)
