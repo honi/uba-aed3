@@ -45,7 +45,9 @@ Sea $G=(V,E)$ un grafo dirigido pesado con función de peso $w:E \rightarrow \ma
 
 > Después de $|V|-1$ iteraciones vale $v.d = \delta(s,v)$ para todo vértice $v \in V$ alcanzable desde $s$.
 
-Para cualquier vértice $v \in V$ alcanzable desde $s$ existe algún camino mínimo $p = \langle v_0, \dots, v_k \rangle$ con $s = v_0$ y $v = v_k$. Como un camino mínimo es simple, $p$ tiene a lo sumo $|V|-1$ aristas y entonces $k \leq |V|-1$.
+Para cualquier vértice $v \in V$ no alcanzable desde $s$ ya inicializamos $v.d = \delta(s,v) = \infty$, por la **propiedad de los vértices no alcanzables** este valor ya no cambia.
+
+Tomemos ahora cualquier vértice $v \in V$ alcanzable desde $s$. Existe algún camino mínimo $p = \langle v_0, \dots, v_k \rangle$ con $s = v_0$ y $v = v_k$. Como un camino mínimo es simple, $p$ tiene a lo sumo $|V|-1$ aristas y entonces $k \leq |V|-1$.
 
 En cada una de las $|V|-1$ iteraciones, el algoritmo relaja **todas** las aristas. En particular relaja las de $p$. En algún momento de la primer iteración relaja la arista $(v_0, v_1)$. Luego, en algún momento de la segunda iteración relaja la arista $(v_1, v_2)$. En la iteración $k$ relajamos la arista $(v_{k-1}, v_k)$. Fuimos relajando cada arista de $p$ en orden, entonces por la **propiedad de relajación** al terminar la iteración $k$ vale $v.d = \delta(s,v)$ y ya no cambia más por la **propiedad del límite superior**.
 
