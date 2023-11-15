@@ -26,4 +26,5 @@ Resumen de los temas para el final, compilando resultados de las teóricas, otro
     - [Ford-Fulkerson](./ford-fulkerson.md)
     - [Edmonds-Karp](./edmonds-karp.md)
 - NP completitud
-    - ???
+    - [Tipos de problemas](./tipos-de-problemas.md)
+    - [P / NP](./p-np.md)
