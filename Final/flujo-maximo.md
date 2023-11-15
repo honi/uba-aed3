@@ -58,13 +58,15 @@ El flujo neto que atraviesa el corte está dado por $f(S,T) = \sum\limits_{u \in
 
 La capacidad del corte está dado por $c(S,T) = \sum\limits_{u \in S} \sum\limits_{v \in T} c(u, v)$, la suma de las capacidades de las aristas que van de $S$ a $T$.
 
+Conceptualmente el corte define un cuello de botella. Para cualquier valor de flujo $F$ circulando por la red, y cualquier corte $(S,T)$, vale que $F \leq c(S,T)$.
+
 **Corte mínimo**
 
-Definimos el corte mínimo como la partición $(S,T)$ que minimiza $c(S,T)$ entre todos los cortes posibles de la red. Conceptualmente el corte define un cuello de botella, es decir una cota superior para cualquier valor de flujo $F$ circulando por la red.
+Definimos el corte mínimo como la partición $(S,T)$ que minimiza $c(S,T)$ entre todos los cortes posibles de la red.
 
 ## Teorema flujo máximo / corte mínimo
 
-A partir de los resultados anteriores, observemos que si encontramos el corte mínimo, la capacidad de ese corte nos dice el flujo máximo que puede circular por la red.
+Este teorema nos dice que el valor de flujo máximo $F$ es igual a la capacidad del corte mínimo. Formalmente se define de la siguiente manera.
 
 Sea una red $G=(V,E)$ con fuente $s$ y sumidero $t$. Si $f$ es un flujo factible de la red con valor $F$, entonces estas 3 afirmaciones son equivalentes:
 
@@ -72,4 +74,8 @@ Sea una red $G=(V,E)$ con fuente $s$ y sumidero $t$. Si $f$ es un flujo factible
 2. No existe camino de aumento en la red residual de $G$.
 3. $F = c(S,T)$ para algún corte $(S,T)$ de $G$.
 
-Por un lado nos dice que el valor del flujo máximo es igual a la capacidad de algún corte mínimo. Por otro lado nos dice que si no hay más caminos de aumento en la red residual, entonces encontramos el flujo máximo.
+Idea para la demostración:
+
+- $1 \Rightarrow 2$: Por el absurdo, suponer que existe un camino de aumento y que se puede incrementar $F$ que es el flujo máximo.
+- $2 \Rightarrow 3$: Como no existe camino de aumento, podemos inducir un corte $(S,T)$ donde en $S$ están todos los vértices alcanzables desde $s$, y $T = V - S$. Además, y esto es lo importante, no hay aristas que cruzan el corte desde $T$ hacia $S$, no hay flujo que "vuelve". Entonces si planteamos la fórmula del flujo que atraviesa el corte, obtenemos que en realidad $f(S,T) = c(S,T)$.
+- $3 \Rightarrow 1$: Por lo expuesto anteriormente vimos que cualquier valor de flujo es a lo sumo la capacidad de cualquier corte. En particular para todo flujo $F'$ vale que $F' \leq c(S, T) = F$. Entonces para todo flujo $F'$, $F' \leq F$ y resulta que $F$ es máximo.
