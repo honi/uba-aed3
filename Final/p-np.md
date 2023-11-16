@@ -7,21 +7,21 @@ Definiciones:
 - $\Pi$: problema.
 - $D_\Pi$: el conjunto de todas las instancias de $\Pi$.
 - $I \in D_\Pi$: instancia de un $\Pi$.
-- $Y_\Pi$: conjunto de todas las instancias $I$ tales que $\Pi(I) = $ sí.
+- $Y_\Pi$: conjunto de todas las instancias $I$ tales que $\Pi(I) = $ *sí*.
 
 ## Máquina de Turing
 
-Una máquina de Turing es una cinta infinita la cual se mueva hacia la izquierda o derecha pasando por un cabezal. Además, en todo momento la máquina tiene un estado interno. En cada paso, el cabezal lee el símbolo en esa posición de la cinta y determina cuál es el nuevo estado, hacia dónde mover y qué otro símbolo escribir en la cinta.
+Una máquina de Turing es una cinta infinita la cual se mueve hacia la izquierda o derecha pasando por un cabezal. Además, en todo momento la máquina tiene un estado interno. En cada paso, el cabezal lee el símbolo en esa posición de la cinta y determina cuál es el nuevo estado, hacia dónde mover y qué otro símbolo escribir en la cinta.
 
-En la versión determinística (MTD), para cada combinación de estado y símbolo hay una única opción para hacer.
+En la versión **determinística** (MTD), para cada combinación de estado y símbolo hay una única opción para hacer.
 
-En cambio, la versión no determinística (MTND) puede tener muchas opciones para realizar para la misma combinación de estado y símbolo leído. No está especificado de antemano ningún criterio para elegir qué hacer.
+En cambio, la versión **no determinística** (MTND) puede tener muchas opciones para realizar para la misma combinación de estado y símbolo leído. No está especificado de antemano ningún criterio para elegir qué hacer. Podemos pensarlo como que se hacen todo al mismo tiempo. Obviamente no existe (aún) una máquina capaz de computar de esta forma.
 
-## Clases de problemas
+## Clase de problemas
 
-**P: clase de problemas polinomiales**. Existe una MTD polinomial que resuelve el problema de decisión. Es equivalente a decir que existe un algoritmo en la máquina RAM que resuelve el problema en tiempo polinomial.
+**P: polinomiales**. Existe una MTD polinomial que resuelve el problema de decisión. Es equivalente a decir que existe un algoritmo en la máquina RAM que resuelve el problema en tiempo polinomial.
 
-**NP: clase de problemas polinomiales no-determinísticos**. Existe una MTND polinomial que para toda instancia del problema de decisión donde la respuesta es sí, la MTND responde sí. Es equivalente a decir que para una instancia del problema donde la respuesta es sí, existe un certificado de tamaño polinomial (respecto a la instancia) que garantiza que la respuesta es sí, existe un algoritmo que puede verificar la garantía del certificado en tiempo polinomial (respecto al certificado).
+**NP: polinomiales no-determinísticos**. Existe una MTND polinomial que para toda instancia del problema de decisión donde la respuesta es *sí*, la MTND responde *sí*. Es equivalente a decir que para una instancia del problema donde la respuesta es *sí*, existe un certificado de tamaño polinomial (respecto a la instancia) que garantiza que la respuesta es *sí*, y además existe un algoritmo que puede verificar la garantía del certificado en tiempo polinomial (respecto al certificado).
 
 ## Reducciones polinomiales
 
@@ -35,14 +35,14 @@ Las reducciones polinomiales son transitivas: $\Pi_1 \leq_P \Pi_2 \leq_P \Pi_3$ 
 
 Un problema $\Pi$ es NP-Completo si cumple con las siguientes condiciones:
 
-1. $\Pi \in$ NP: puedo verificar un certificado en tiempo polinomial.
+1. $\Pi \in$ NP: podemos verificar un certificado en tiempo polinomial.
 2. Para todo problema $\Pi' \in$ NP, $\Pi' \leq_P \Pi$: el problema $\Pi$ es **al menos** tan difícil como cualquier otro problema de NP. Decimos que $\Pi$ es NP-Hard.
 
 ## Co-NP
 
-La clase Co-NP son los problemas $\Pi$ tales que podemos verificar un certificado polinomial por "no" en tiempo polinomial.
+La clase Co-NP son los problemas $\Pi$ tales que podemos verificar un certificado polinomial por *no* en tiempo polinomial.
 
-Dado un problema $\Pi$, el problema complemento $\Pi^c$ tiene el mismo conjunto de instancias pero "da vuelta" la respuesta, responde sí cuando $\Pi$ responde no.
+Dado un problema $\Pi$, el problema complemento $\Pi^c$ tiene el mismo conjunto de instancias pero "da vuelta" la respuesta, responde *sí* cuando $\Pi$ responde *no*.
 
 Más formalmente:
 - $D_{\Pi^c} = D_\Pi$: mismas instancias.
@@ -58,6 +58,15 @@ Lo que sí podemos decir es que si $\Pi \in$ NP entonces $\Pi^c \in$ Co-NP.
 
 > SAT es NP-Completo.
 
-Para demostrarlo, por un lado sabemos que SAT es NP porque una valuación de la fórmula es en sí un certificado, y podemos verificar que la valuación efectivamente satisface la fórmula en tiempo polinomial.
+Para demostrarlo, por un lado sabemos que SAT es NP porque una valuación concreta de la fórmula es en si misma un certificado, y podemos verificar que la valuación efectivamente satisface la fórmula en tiempo polinomial.
 
-Por otro lado tenemos que mostrar que todos los otros problemas $\Pi \in$ NP son "más fáciles" que SAT, es decir $\Pi \leq_P$ SAT. La idea es tomar un problema arbitrario $\Pi \in$ NP, el cual tiene una MTND que lo resuelve. Muy high level, lo que hacemos es construir una fórmula lógica a partir de términos lógicos que codifican la ejecución de la MTND de forma tal que la fórmula se satisface si y solo si la MNTD llega a un estado final de "si".
+Por otro lado tenemos que mostrar que todos los otros problemas $\Pi \in$ NP son **a lo sumo** tan difíciles que SAT, es decir $\Pi \leq_P$ SAT para todo $\Pi \in$ NP. La idea es tomar un problema arbitrario $\Pi \in$ NP, el cual tiene una MTND que lo resuelve. La idea es construir una fórmula lógica a partir de términos lógicos que codifican la ejecución de la MTND de forma tal que la fórmula se satisface si y solo si la MNTD llega a un estado final de *sí*.
+
+## Demostrar que un problema es NP-Completo
+
+A partir del resultado de Cook-Levin tenemos una estrategia más fácil para demostrar que un problema es NP-Completo. Se basa en utilizar la transitividad de las reducciones polinomiales.
+
+Si queremos demostrar que un problema de decisión $\Pi \in$ NP-Completo, realizamos los siguientes pasos:
+
+1. Mostramos que $\Pi \in$ NP. Para esto presentamos un certificado polinomial y su respectivo verificador polinomial.
+2. Encontramos otro problema $\Pi'$ que ya sabemos que es NP-Completo y mostramos que existe una reducción polinomial tal que $\Pi' \leq_P \Pi$.
