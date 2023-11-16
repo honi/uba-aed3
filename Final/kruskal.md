@@ -33,22 +33,18 @@ def kruskal(G):
 
 ## Correctitud
 
-Primero probamos que el algoritmo obtiene un AG. Sea $G$ un grafo conexo y pesado, y $T$ el subgrafo generado por el algoritmo. $T$ no puede tener ciclos, ya que por definición una arista es descartada si forma un ciclo. $T$ no puede estar desconectado porque el algoritmo hubiese agregado la primer arista que encuentra que conecta las 2 componentes. Entonces $T$ es un AG de $G$.
+Nos apoyamos en la [demostración del algoritmo goloso para construir un AGM](./agm.md).
 
-Segundo probamos que el algoritmo obtiene un AGM por inducción en las iteraciones.
+En cada iteración, agregamos en $A$ la arista $e=(u,v)$ de menor peso que conecta dos componentes conexas distintas (determinamos esto con el `if` usando las operaciones del disjoint-set). Podemos definir el corte $(S, T)$ simplemente poniendo en $S$ la componente conexa de $u$ y en $T$ la componente conexa de $v$. El resto de las componentes en $A$ las podemos agregar en $S$ o $T$, es indistinto.
 
-Hipótesis inductiva: si $A$ es el conjunto de aristas seleccionadas por el algoritmo en cualquier iteración, entonces existe un AGM $T$ que contiene a $A$ y ninguna de las aristas rechazadas por el algoritmo.
-
-Caso base: $A = \emptyset$. Claramente vale pues $A$ está en cualquier AGM de un grafo $G$ conexo y pesado.
-
-Paso inductivo. Si la arista $e$ que agrega el algoritmo está en $T$, entonces vale que $A+e \subset T$. Caso contrario significa que $T+e$ tiene un ciclo $C$. Notemos que $C$ tiene aristas que no están en $A$, ya que no hay ciclos en $A+e$.
-
-Sea $f$ alguna arista en $C$ que además no está en $A$. Como el algoritmo eligió la arista $e$ en vez de $f$, necesariamente $w(e) \leq w(f)$. Podemos construir otro árbol $T' = T - f + e$ que tiene el mismo peso que $T$ o menor: $w(T') = w(T) - w(f) + w(e) \leq w(T)$. Como $T$ es un AGM vale que $w(T) \leq w(T')$. Por lo tanto $w(T') = w(T)$, $T'$ es un AGM, $A+e \subset T'$ y se cumple la hipótesis inductiva.
-
-Cuando $A$ es un AG, por la hipótesis inductiva $A$ es también un AGM.
+Entonces el corte $(S,T)$ respeta $A$ y $e$ es una arista de peso mínimo que cruza el corte.
 
 ## Complejidad
 
-Inicializar los $|V|$ árboles cuesta $O(V)$. Ordenar las aristas es $O(sort(E))$, que lo dejamos sin especificar ya que quizás el problema admite algún ordenamiento que no sea por comparaciones lo cual brinda una mejor complejidad. El bucle realiza $O(E)$ iteraciones donde cada iteración tiene una complejidad de $O(\alpha(V))$ en el llamado a `union`.
+- Inicializar los $|V|$ árboles: $O(V)$.
+- Ordenar las aristas: $O(sort(E))$.
+    - Lo dejamos sin especificar ya que quizás el problema admite algún ordenamiento que no sea por comparaciones lo cual brinda una mejor complejidad, o quizás las aristas ya vienen ordenadas.
+- El `for` realiza $O(E)$ iteraciones.
+- Cada iteración tiene una complejidad de $O(\alpha(V))$ en las operaciones del disjoint-set si se usa una implementación optimizada con union by rank y path compression.
 
 La complejidad resulta: $O(V + sort(E) + E * \alpha(V))$.
