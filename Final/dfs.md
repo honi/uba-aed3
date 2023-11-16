@@ -6,6 +6,7 @@ Visitar todos los vértices realizando un recorrido en profundidad y generando u
 
 - Encontrar ciclos.
 - Clasificar aristas.
+- Encontrar aristas puente.
 - Ordenar los vértices (topological sort).
 - Encontrar todos los vértices alcanzables desde $s$.
 - Encontrar componentes conexas y fuertemente conexas.
