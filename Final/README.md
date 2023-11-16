@@ -26,4 +26,6 @@ Resumen de los temas para el final, compilando resultados de las teóricas, otro
     - [Edmonds-Karp](./edmonds-karp.md)
 - NP completitud
     - [Tipos de problemas](./tipos-de-problemas.md)
-    - [P / NP](./p-np.md)
+    - [Clases P / NP](./p-np.md)
+    - [Ejemplos de problemas](./ejemplos-de-problemas.md)
+    - [Reducciones](./reducciones.md)

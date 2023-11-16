@@ -38,6 +38,8 @@ Un problema $\Pi$ es NP-Completo si cumple con las siguientes condiciones:
 1. $\Pi \in$ NP: podemos verificar un certificado en tiempo polinomial.
 2. Para todo problema $\Pi' \in$ NP, $\Pi' \leq_P \Pi$: el problema $\Pi$ es **al menos** tan difícil como cualquier otro problema de NP. Decimos que $\Pi$ es NP-Hard.
 
+Si encontramos una forma de resolver un problema NP-completo en tiempo polinomial, entonces todos los problemas en NP podrían resolverse también en tiempo polinomial.
+
 ## Co-NP
 
 La clase Co-NP son los problemas $\Pi$ tales que podemos verificar un certificado polinomial por *no* en tiempo polinomial.
@@ -70,3 +72,14 @@ Si queremos demostrar que un problema de decisión $\Pi \in$ NP-Completo, realiz
 
 1. Mostramos que $\Pi \in$ NP. Para esto presentamos un certificado polinomial y su respectivo verificador polinomial.
 2. Encontramos otro problema $\Pi'$ que ya sabemos que es NP-Completo y mostramos que existe una reducción polinomial tal que $\Pi' \leq_P \Pi$.
+
+## Implicancias
+
+En la práctica determinar si el problema que estamos resolviendo pertenece a NP-Completo nos permite focalizar nuestros esfuerzos de manera inteligente. Ya sabemos que el problema es difícil y no se conocen algoritmos eficientes para resolverlo. No obstante, todavía podemos obtener resultados aceptables empleando algunas de las siguientes estrategias.
+
+- Analizar si el problema tiene restricciones que lo simplifiquen y así poder encontrar un algoritmo eficiente.
+- Analizar si el problema admite una solución pseudo-polinomial.
+- Analizar si el problema se puede reducir a algún otro problema NP-Completo que tenga solvers eficientes en la práctica.
+- Analizar si el tamaño de nuestras instancias admite una solución basada en fuerza bruta o backtracking.
+- Buscar heurísticas aprovechando las particularidades de nuestro problema.
+- Analizar si existen algoritmos aproximados que nos brinden una solución aceptable para nuestras necesidades.
