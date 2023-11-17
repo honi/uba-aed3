@@ -51,7 +51,7 @@ Al comienzo de cada iteración, $|S|$ representa la cantidad de iteraciones real
 - $|S| = 0$: vale trivialmente pues no hay ningún vértice en $S$.
 - $|S| = 1$: vale pues en la inicialización, $v.d = \infty$ para todos los vértices $v \in V - \lbrace s \rbrace$, y $s.d = 0$. El primer vértice que extraemos de la cola es $s$. Entonces cuando $|S| = 1$ tenemos $S = \lbrace s \rbrace$ y se cumple que $s.d = \delta(s,s) = 0$.
 
-Para el paso inductivo la hipótesis inductiva es que $v.d = \delta(s,v)$ para todos los vértices $v \in S$. Sea $u \in V - S$ el vértice que extraemos de la cola. Tenemos que mostrar que al momento de agregar $u$ en $S$ vale que $u.d = \delta(s,u)$.
+La hipótesis inductiva es que $v.d = \delta(s,v)$ para todos los vértices $v \in S$. Sea $u \in V - S$ el vértice que extraemos de la cola. Tenemos que mostrar que al momento de agregar $u$ en $S$ vale que $u.d = \delta(s,u)$.
 
 Si $u$ no es alcanzable desde $s$, entonces por la propiedad de los **vértices no alcanzables** $u.d = \delta(s,u) = \infty$.
 
@@ -69,10 +69,10 @@ $\delta(s,y) \leq \delta(s,u) \leq u.d \leq y.d = \delta(s,y) \Rightarrow u.d = 
 
 - Inicializar los vértices: $O(V)$.
 - Insertar todos los vértices en $Q$: $O(V)$.
-- `while`: $(V * \text{extract\_min})$.
+- `while`: $(V * \text{extract-min})$.
     - Hace $O(V)$ iteraciones ya que nunca se vuelven a insertar vértices en $Q$.
     - El costo de cada iteración es el costo de extraer el mínimo, depende de la cola utilizada.
-- `for`: $O(E * \text{decrease\_key})$
+- `for`: $O(E * \text{decrease-key})$
     - Cada vértice sale de la cola de prioridad una única vez, por lo tanto en total recorremos cada arista una única vez.
     - El costo de cada iteración es el costo de decrementar la clave, ya que `relax` es $O(1)$.
 
@@ -82,7 +82,7 @@ Las operaciones con la cola de prioridad dependen de su implementación.
 - Min binary heap: $O(log(V))$ para extraer el mínimo y decrementar una clave.
 - Fibonacci heap: $O(log(V))$ para extraer el mínimo, $O(1)$ amortizado para decrementar una clave.
 
-La complejidad final resulta: $O(V + V + V * \text{extract\_min} + E * \text{decrease\_key}) = O(V * \text{extract\_min} + E * \text{decrease\_key})$.
+La complejidad final resulta: $O(V + V + V * \text{extract-min} + E * \text{decrease-key}) = O(V * \text{extract-min} + E * \text{decrease-key})$.
 
 - Cola de prioridad con vector: $O(V^2 + E) = O(V^2)$ pues $O(E) = O(V^2)$.
 - Cola de prioridad con min heap: $O(V * log(V) + E * log(V)) = O(E * log(V))$.
