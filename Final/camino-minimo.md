@@ -86,4 +86,4 @@ Si tenemos un camino mínimo $p = \langle v_0, \dots, v_k \rangle$ desde $s = v_
 
 **Subgrafo de predecesores** (predecessor-subgraph property)
 
-Una vez que $v.d = \delta(s,v)$ para todos los vértices $v \in V$, el subgrafo de predecesores es un árbol de caminos mínimos enraizado en $s$.
+Una vez que $v.d = \delta(s,v)$ para todos los vértices $v \in V$, el subgrafo de predecesores es un árbol de caminos mínimos enraizado en $s$. Esto nos dice que podemos obtener los vértices de un camino mínimo utilizando la información guardada de padres en cada paso de relajación.

@@ -4,7 +4,7 @@ El algoritmo de Bellman-Ford encuentra todos los caminos mínimos desde algún v
 
 La entrada del algoritmo es un grafo dirigido pesado $G=(V,E)$ y un vértice fuente $s \in V$. Este algoritmo acepta aristas con pesos negativos y permite detectar ciclos negativos alcanzables desde $s$.
 
-El algoritmo relaja todas las aristas, progresivamente decrementando $v.d$, el peso estimado del camino mínimo desde $s$ a todos los vértices $v \in V$. Se repite este proceso hasta que $v.d$ converge a $\delta(s, v)$. Al finalizar, retorna `True` si y solo si no hay ciclos negativos alcanzables desde $s$, caso contrario retorna `False`.
+El algoritmo relaja todas las aristas progresivamente decrementando $v.d$, el peso estimado del camino mínimo desde $s$ a $v$. Se repite este proceso hasta que $v.d$ converge a $\delta(s, v)$. Al finalizar, retorna `True` si y solo si no hay ciclos negativos alcanzables desde $s$.
 
 ## Algoritmo
 
@@ -43,7 +43,7 @@ def bellman_ford(G, s):
 
 Sea $G=(V,E)$ un grafo dirigido pesado con función de peso $w:E \rightarrow \mathbb{R}$, y $s \in V$ el vértice fuente. La propiedad $v.d$ de los vértices es la distancia estimada desde $s$ a $v$. Supongamos además que $G$ no tiene ciclos negativos alcanzables desde $s$.
 
-> Después de $|V|-1$ iteraciones vale $v.d = \delta(s,v)$ para todo vértice $v \in V$ alcanzable desde $s$.
+> Después de $|V|-1$ iteraciones vale $v.d = \delta(s,v)$ para todo vértice $v \in V$.
 
 Para cualquier vértice $v \in V$ no alcanzable desde $s$ ya inicializamos $v.d = \delta(s,v) = \infty$, por la **propiedad de los vértices no alcanzables** este valor ya no cambia.
 
@@ -55,7 +55,7 @@ En cada una de las $|V|-1$ iteraciones, el algoritmo relaja **todas** las arista
 
 Sea $G=(V,E)$ un grafo dirigido pesado con función de peso $w:E \rightarrow \mathbb{R}$, y $s \in V$ el vértice fuente. La propiedad $v.d$ de los vértices es la distancia estimada desde $s$ a $v$.
 
-> Si $G$ no tiene ciclos negativos alcanzables desde $s$, luego de ejecutar Bellman-Ford vale $v.d = \delta(s,v)$ para todos los vértices $v \in V$ alcanzables por $s$, y los predecesores en $v.p$ forman un árbol de caminos mínimos enraizado en $s$. Si $G$ tiene ciclos negativos alcanzables desde $s$ entonces retorna False.
+> Si $G$ no tiene ciclos negativos alcanzables desde $s$, luego de ejecutar Bellman-Ford vale $v.d = \delta(s,v)$ para todos los vértices $v \in V$, y los predecesores en $v.p$ forman un árbol de caminos mínimos enraizado en $s$. Si $G$ tiene ciclos negativos alcanzables desde $s$ entonces retorna False.
 
 Si $G$ no tiene ciclos negativos alcanzables desde $s$, por el **lema** anterior vale el teorema, y por la **propiedad del límite superior** el segundo for no puede retornar `False` (ya no se puede mejorar la distancia mínima).
 
