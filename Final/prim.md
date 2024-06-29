@@ -41,7 +41,7 @@ El conjunto de vértices $S$ y la cola $Q$ definen el corte $(S, Q)$. Los vérti
 
 Cada vez que agregamos un vértice $v$ en $S$ lo sacamos de $Q$, redefiniendo el corte. Además actualizamos el peso mínimo para llegar a los vecinos de $v$ que aún están en $Q$ usando aristas que cruzan el corte.
 
-Cuando $Q = \empty$ vale $S = V$, y utilizando el atributo `parent` podemos reconstruir el AGM.
+Cuando $Q = \emptyset$ vale $S = V$, y utilizando el atributo `parent` podemos reconstruir el AGM.
 
 ## Complejidad
 
